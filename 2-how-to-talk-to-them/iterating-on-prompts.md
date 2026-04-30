@@ -10,7 +10,7 @@ tags: [prompting, iteration]
 
 The first prompt is rarely the right prompt. That fact is structural, not a sign that something has gone wrong.
 
-Editing the prompt is editing the prompter's own thinking. Iteration is part of drafting, the same way a second paragraph is part of writing the first one — not an emergency response to a bad output.
+Editing the prompt is editing the prompter's own thinking. Iteration is part of drafting, the same way revising paragraph one is part of writing paragraph two — not an emergency response to a bad output.
 
 ## The first response is a probe
 
@@ -50,6 +50,8 @@ OUTPUT
 REALIZATION
   The model has no access to the actual research notes. It is
   paraphrasing the median public description of each company.
+  The bullet style needs an example, not a description, to land
+  the right shape.
 
 v3 ─────────────────────────────────────────────────────────────
 PROMPT
@@ -58,9 +60,9 @@ PROMPT
   Example bullet shape:
     "A — anchors on enterprise SSO; gap: nothing for solo users."
 
-  <notes>
+  --- NOTES ---
     [the prompter's actual research, pasted in]
-  </notes>
+  --- END NOTES ---
 
 OUTPUT
   Brief reads off the prompter's own gathered material in the
@@ -79,13 +81,10 @@ The moves that produce iterations like the one above are discrete editorial acti
 - **Hand over the source material instead of asking the model to invent it.** Paraphrase-from-training-data is the failure mode this fixes.
 - **Ask for variants.** Five subject lines, three openings, ten alternative phrasings — then pick. Abundance beats attachment to the first draft.
 - **Ask for the inverse.** "What would a bad version of this look like?" surfaces what the prompter is implicitly ruling out.
-- **Reframe the question.** If the output is wrong-shaped, the question is probably wrong-shaped. Editing the wording will not fix it.
 
 Each move is the prompter taking back a decision the model would otherwise have made by averaging.
 
 ## Iterating the prompt vs editing the output
-
-Two distinct moves, both valid, doing different work.
 
 Editing the output keeps the model's framing intact and changes the wording. Useful when the framing is right and the prose is not.
 
@@ -93,6 +92,6 @@ Iterating the prompt changes the framing. Useful when the output is wrong-shaped
 
 The diagnostic is: would this problem appear again if the prompt ran a second time? If yes, re-prompt. If no, edit. Sometimes a re-prompt reaches in one round what three rounds of in-place edits cannot. Knowing when to throw away the draft rather than nurse it along is itself part of the skill, and the [[the-intern-frame]] coworker behavior — re-prompting without apology — is what makes that move cheap to take.
 
-Iteration is the natural state of drafting with a model. The first prompt is a hypothesis about the answer; the prompts that follow are what happens when the hypothesis meets a draft and the prompter decides what to do next.
+The first prompt is a hypothesis. The output is the test. The next prompt is what the prompter learned, written down.
 
 *Related: [[prompt-as-thinking]] · [[the-intern-frame]] · [[reading-the-output]]*
