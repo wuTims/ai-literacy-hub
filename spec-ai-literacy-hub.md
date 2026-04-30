@@ -82,6 +82,13 @@ Same set as the engineering writing-style guide, with one addition specific to l
 - No fearmongering. The MIT cognition study is empirical anchor, not scare tactic. Cite once or twice across the hub, not on every page.
 - No tool tribalism. Claude / ChatGPT / Gemini / Copilot all have legitimate use cases. Opinions about which to reach for live in Section 4 with reasoning, not as drive-by claims elsewhere.
 
+### Citations
+
+- MIT cognition study (*Your Brain on ChatGPT*, 2025): hard cap of 2 across the hub. Anti-fearmongering rule. Tracker: `_meta/citation-tracker.md`.
+- Other empirical or argumentative sources (Karpathy, Willison, Mollick, Mitchell, Anthropic, OpenAI, et al.): no cap. Cite when the source carries the argument; synthesize and reframe in hub voice (authoring rule 2).
+- Attribution standard: load-bearing claims that originate with a named source get the source named on first use within a section. Subsequent reuse in the same section can rely on the earlier attribution.
+- No drive-by citations. If a citation does not change what the reader should believe or do, drop it.
+
 ## Hub structure
 
 Four logical sections, plus three cross-cutting pages. Self-directed graph navigation; a "Start here" page surfaces a recommended order for readers who want hand-holding.
