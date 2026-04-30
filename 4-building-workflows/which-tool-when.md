@@ -12,13 +12,13 @@ The four mainstream chat tools — Claude, ChatGPT, Gemini, and Copilot — are 
 
 This is the only page in the hub that recommends. Elsewhere the hub stays neutral; here the work is to choose.
 
-<!-- diagram lands here: tool-selection-decision-tree.png -->
+![[tool-selection-decision-tree.png]]
 
 ## What the four tools actually are right now
 
-Each of the four occupies a slot defined by a small number of properties. The slots are stable; specifics are a snapshot, dated to the frontmatter.
+Each of the four occupies a slot defined by a small number of properties.
 
-- **Claude.** Largest practical context window in the consumer chat tier. Default output skews longer-form and structured. Strong fit when the task is to read a lot of source material and produce a careful artifact.
+- **Claude.** Default output skews longer-form and structured. Reliable on long pasted source. Strong fit when the task is to read a lot of source material and produce a careful artifact.
 - **ChatGPT.** Broadest first-party tool surface — image generation, voice, file analysis, custom GPTs, web search. Strong fit when the task needs more than chat and the alternative is wiring up several products.
 - **Gemini.** Tight integration with Google Workspace — Gmail, Docs, Drive, Calendar. Web-grounded answers by default. Strong fit when the artifact already lives in Google's stack or the question is about current public information.
 - **Copilot (Microsoft 365).** Embedded inside Word, Excel, Outlook, and Teams. The artifact never leaves the document. Weakest of the four as a standalone chat; strongest as an in-document assistant when the file is already open.
@@ -29,7 +29,7 @@ The table is a snapshot. Capabilities shift; check the dates in the frontmatter 
 
 | Task                                              | Claude                              | ChatGPT                              | Gemini                              | Copilot                              |
 |---------------------------------------------------|-------------------------------------|--------------------------------------|-------------------------------------|--------------------------------------|
-| Long-document research, 50+ pages                 | Strong — largest window             | Workable — smaller window            | Workable — Drive ingest             | Weak — limited paste surface         |
+| Long-document research, 50+ pages                 | Strong — long pasted source         | Workable — smaller window            | Workable — Drive ingest             | Weak — limited paste surface         |
 | Drafting prose in your own voice                  | Strong — structured longform default| Fits — flexible register             | Workable — neutral default          | Workable — only inside Word          |
 | Summarizing documents you provide                 | Strong — window holds the source    | Strong — tight on uploads            | Fits — best when source is in Drive | Fits — best when source is the open doc |
 | Planning, breaking a goal into steps              | Strong — structured longform default| Strong — plus tool calls             | Workable — less structured          | Weak — outside its surface           |
@@ -38,7 +38,7 @@ The table is a snapshot. Capabilities shift; check the dates in the frontmatter 
 | Web-grounded factual lookup                       | Workable — search opt-in            | Fits — search built in               | Strong — search is the default      | Workable — varies by surface         |
 | Spreadsheet operations on a live workbook         | Weak — no workbook access           | Workable — code interpreter on uploads| Workable — Sheets integration       | Strong — Excel-native                |
 
-Two patterns run through the table. Tasks dominated by *how much source the model has to hold* go to Claude on context window. Tasks dominated by *where the artifact lives* go to whichever vendor owns the surrounding software — Gemini for Google, Copilot for Microsoft. ChatGPT fits where the task needs ad-hoc tools without a host application.
+Two patterns run through the table. Tasks where the artifact's *shape* matters — structured longform, prose drafting — favor Claude's defaults. Tasks dominated by *where the artifact lives* go to whichever vendor owns the surrounding software — Gemini for Google, Copilot for Microsoft. ChatGPT fits where the task needs ad-hoc tools without a host application.
 
 ## When to step outside the chat interface entirely
 
