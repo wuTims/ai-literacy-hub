@@ -15,7 +15,7 @@ The MIT Media Lab *Your Brain on ChatGPT* (2025) study may be cited at most **tw
 | # | Page | Section | Note |
 |---|---|---|---|
 | 1 | `how-not-to-produce-ai-slop.md` | "Why the distinction matters" | Empirical anchor for the slop-aversion thesis. |
-| 2 | _open_ | _open_ | _open_ |
+| 2 | `2-how-to-talk-to-them/prompt-as-thinking.md` | "The diagnostic" | Empirical fit for the prompt-as-framing mechanism — delegating framing reduces engagement. |
 
 ## Rule
 
