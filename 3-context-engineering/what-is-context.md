@@ -16,7 +16,7 @@ Karpathy's framing is the one that holds up: the context window is the model's w
 
 Every turn, the application assembles a prefix of tokens and hands it to the model. The model conditions on that prefix and predicts the next token (see [[what-llms-are]] for the underlying mechanism). The prefix *is* the context window. There is nothing else the model can refer to.
 
-<!-- diagram lands here: context-window.png -->
+![[context-window.png]]
 
 ```
 INSIDE THE WINDOW (the model sees this)
