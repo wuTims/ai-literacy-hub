@@ -35,7 +35,7 @@ A NEW CHAT
 
 A chat is transient working memory. A project is a way of saying "every chat I open here should start with these instructions in front of it." A new chat is the act of throwing away accumulated turns on purpose.
 
-<!-- diagram lands here: chat-vs-project-state.png -->
+![[chat-vs-project-state.png]]
 
 ## How to pick
 
