@@ -14,9 +14,9 @@ The discipline is curation, not collection. More material in the window is not m
 
 ## Curating, not collecting
 
-A container — a project, a custom GPT, a Gem — decides what should always be there across chats (see [[chats-vs-projects]]). Feeding the model is the narrower question: given that container's preamble, what additional material should sit in *this* turn's window before the question is asked?
+Curation works at two levels. The container — a project, a custom GPT, a Gem — decides what should always sit in front of the model across chats (see [[chats-vs-projects]]). Feeding decides what extra material this turn's window needs.
 
-The failure mode at this layer is the dumping-ground prompt: paste eight documents, ask for "a summary that captures the key points," receive a doc that smooths every contradiction and names no specifics. The model has been handed a prefix in which everything is equally weighted, and it has produced an output in which everything is equally weighted.
+The failure mode at this layer is the dumping-ground prompt: paste eight documents, ask for "a summary that captures the key points," receive a doc that smooths every contradiction and names no specifics. The model has been handed a prefix in which everything is equally weighted, and the output is weighted the same.
 
 | Task                                          | Dumping the material in                                                  | Scoped feed                                                                              |
 |-----------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
@@ -30,11 +30,9 @@ The pattern down the table is the same shape every row: the dump asks the model 
 
 ## Three principles for what goes in
 
-The moves that produce a useful prefix are small and durable.
-
 **Specificity beats volume.** A two-paragraph excerpt that contains the load-bearing material outperforms a fifty-page document that contains it on page thirty-one. The model does not skim; it conditions on what is there. Length without relevance is noise that competes with the signal for attention.
 
-**Long source first, the ask last.** Inside the window, the model attends most heavily to what is closest to the cursor. Source material at the top with the question at the bottom keeps the source in scope at the moment the answer is being formed. The reverse — question stated, then a wall of pasted material — leaves the model writing into the gap before it has finished reading.
+**Long source first, the ask last.** Inside the window, the model attends most heavily to what is closest to the cursor. Source material at the top with the question at the bottom keeps the source in scope when the answer is formed. The reverse — question stated, then a wall of pasted material — leaves the model writing into the gap before it has finished reading.
 
 **Quote before answering.** Asking the model to surface the relevant passages from the source before it answers is a forcing function for grounded output. A model that has just quoted the paragraph it is relying on writes a different next paragraph than one asked for a conclusion straight away. The quoting step makes the retrieval visible and checkable.
 
@@ -70,13 +68,13 @@ DESIRED OUTPUT SHAPE
   not obvious from the ask.
 ```
 
-The template is a reminder of which decisions, if left implicit, the model will make by averaging.
+The template is a reminder of which decisions, if left implicit, the model averages.
 
 ## What feeding does not solve
 
-Retrieval — letting an application fetch material from a larger corpus and inject it into the window — does not remove the curation problem. It moves it. Whoever decides what to retrieve, and how to score relevance, is doing the same editorial work by another name. The work has not vanished; it has changed hands.
+Retrieval — letting an application fetch material from a larger corpus and inject it into the window — does not remove the curation problem. It moves it. Whoever decides what to retrieve, and how to score relevance, is doing the same editorial work by another name. **The behavior to keep:** ask the system what it retrieved before trusting the answer; treat the surfaced excerpts as if you had pasted them yourself.
 
-The same caution applies to attached files. A file in a container is not knowledge the model has; it is material the application may surface when it decides the material is relevant. The decision still belongs to someone.
+The same caution applies to attached files. A file in a container is not knowledge the model has; it is material the application may surface when it decides the material is relevant. **The behavior to keep:** assume nothing is in front of the model unless the conversation makes it visible — quote, ask, or paste.
 
 ## What this is
 
