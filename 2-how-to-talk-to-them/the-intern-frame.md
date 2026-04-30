@@ -8,7 +8,9 @@ tags: [prompting, mental-models]
 
 # The intern frame
 
-The intern frame is a behavior protocol for the prompter, not a posture about the model. It dictates what the prompter spells out, what the prompter hands over, what the prompter pushes back on. The model's intern-ness is beside the point; the work the frame forces the prompter to do is the whole point.
+The intern frame is a behavior protocol for the prompter, not a posture about the model.
+
+It dictates what the prompter spells out, what the prompter hands over, what the prompter pushes back on. The model's intern-ness is beside the point; the work the frame forces the prompter to do is the whole point.
 
 ## The original frame
 
@@ -33,7 +35,7 @@ The retraction is not a repudiation. The onboarding behaviors are still right. T
 
 ## The coworker reframe
 
-The updated framing, from the same writer, is an **infinitely patient new coworker who forgets everything you tell them each new conversation**. Three load-bearing properties sit inside that sentence.
+The updated framing is an **infinitely patient new coworker who forgets everything you tell them each new conversation**. Three load-bearing properties sit inside that sentence.
 
 *Coworker, not subordinate.* The register is collaboration, which raises the ceiling on what the prompter is willing to ask for. Strategy questions, second opinions, devil's-advocate critiques — all in scope.
 
@@ -56,6 +58,6 @@ The two framings are not competing dogmas. They are tools the prompter selects b
 
 The intern frame is useful when scoping unfamiliar work — it forces the prompter to think like an onboarder, which is the right posture when the work itself is being defined. The coworker frame is useful when scaling out — it removes the ceiling on what to ask for and licenses abundance once the work is understood. Both frames share the move that does the actual work: explicit context, every time, written down before the model is asked to extend it.
 
-A frame earns its keep by changing what the prompter does. Both of these change it in the same direction — more context handed over, more decisions made up front, more drafts on the table before the model writes a word.
+A frame is what the prompter does, not what the model is. Hold either one and the same habits follow: write the context down, name the deliverable, inspect the draft before it leaves the conversation.
 
 *Related: [[prompt-as-thinking]] · [[iterating-on-prompts]] · [[how-not-to-produce-ai-slop]]*
