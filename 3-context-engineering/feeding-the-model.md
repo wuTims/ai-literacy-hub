@@ -16,7 +16,7 @@ The discipline is curation, not collection. More material in the window is not m
 
 A container — a project, a custom GPT, a Gem — decides what should always be there across chats (see [[chats-vs-projects]]). Feeding the model is the narrower question: given that container's preamble, what additional material should sit in *this* turn's window before the question is asked?
 
-The failure mode at this layer is the dumping-ground prompt: paste eight documents, ask for "a summary that captures the key points," receive a doc that smooths every contradiction and names no specifics. The model has been handed a prefix in which everything is equally weighted, and it has produced an output in which everything is equally weighted. The shape of the answer mirrors the shape of the feed.
+The failure mode at this layer is the dumping-ground prompt: paste eight documents, ask for "a summary that captures the key points," receive a doc that smooths every contradiction and names no specifics. The model has been handed a prefix in which everything is equally weighted, and it has produced an output in which everything is equally weighted.
 
 | Task                                          | Dumping the material in                                                  | Scoped feed                                                                              |
 |-----------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
@@ -70,7 +70,7 @@ DESIRED OUTPUT SHAPE
   not obvious from the ask.
 ```
 
-Not every prompt needs every section. The template is a reminder of which decisions, if left implicit, the model will make by averaging.
+The template is a reminder of which decisions, if left implicit, the model will make by averaging.
 
 ## What feeding does not solve
 
