@@ -14,7 +14,7 @@ Capability is uneven across tasks that look identical from the outside. The unev
 
 Ethan Mollick's term for it is the **jagged frontier**. Two prompts that read like the same task to a human can produce wildly different success rates from the model. A request to summarize a fifty-page document the prompter pastes in is near-solved. A request to summarize "all our exchanges with this customer last quarter" is a category error in the same sentence shape — the second version asks the model to *retrieve* before it manipulates, and retrieval is the half it does badly.
 
-The frontier does not sort by what humans find difficult. Adding three two-digit numbers is a task most readers can do in their head and most models will get wrong somewhere in the trace. Rewriting a paragraph in a specified voice is a task most readers find hard and most models do well. Training shaped what's easy, not intuition.
+The frontier does not sort by what humans find difficult. Adding a long column of dollar amounts pasted from a statement is a task a reader can verify line by line and many models will get wrong by one entry. Rewriting a paragraph in a specified voice is a task most readers find hard and most models do well. Training shaped what's easy, not intuition.
 
 ## A snapshot, paired by domain
 
@@ -48,8 +48,6 @@ The rows move. The categories underneath move much more slowly:
 - Self-assessment — asking "are you sure?" samples more text from the same machine. See [[why-they-hallucinate]].
 
 A capability that sits in the strength column today rarely moves to the weakness column tomorrow. A capability in the weakness column may improve in any given release, but the *shape* of the weakness — answer-from-the-world, exhaustive count, deduction without scratch space — has held across model generations.
-
-<!-- diagram lands here: jagged-frontier.png -->
 
 ## Why the unevenness will not smooth out on a schedule
 
