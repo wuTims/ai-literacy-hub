@@ -17,9 +17,8 @@ An LLM is not the kind of system most people assume it is the first time they us
 | A search engine   | A probability machine over text it was trained on     | Made-up URLs, invented citations, plausible nonsense  |
 | A database        | Lossy patterns in weights, no timestamp, no schema    | Confident answers about facts that have since changed |
 | A reasoner        | Text shaped like reasoning, generated one token at a time | Steps that look right and conclusions that don't follow |
-| A subject expert  | Interpolation across the patterns of expert writing   | Fluency mistaken for authority on the underlying topic |
 
-Each row is a category error, not a model defect. The mechanism that produces all four is the same one covered in [[what-llms-are]] — next-token prediction, sampled from a learned distribution. The negations below are what that mechanism rules out.
+Each row is a category error, not a model defect. The mechanism that produces all three is the same one covered in [[what-llms-are]] — next-token prediction, sampled from a learned distribution. The negations below are what that mechanism rules out.
 
 ## Not a search engine
 
