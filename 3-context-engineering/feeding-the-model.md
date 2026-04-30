@@ -8,7 +8,7 @@ tags: [context-engineering, prompting]
 
 # Feeding the model
 
-The model thinks with whatever is in front of it this turn. Deciding what to put in front of it is editorial work, not setup.
+The model thinks with whatever is in front of it this turn (see [[what-is-context]]). Deciding what to put in front of it is editorial work, not setup.
 
 The discipline is curation, not collection. More material in the window is not more relevant material; often it is less, because the load-bearing pieces sit buried inside the rest.
 
@@ -80,6 +80,6 @@ The same caution applies to attached files. A file in a container is not knowled
 
 Choosing the source, ordering it before the ask, drawing the boundary around what to ignore — these are decisions that produce the answer, not steps before it. A clean prefix is the work the model amplifies. A messy prefix gets amplified with the same fidelity.
 
-The model knows what is in front of it. Putting the right thing there is the work.
+Curate the source. Order before the ask. Mark what to ignore. Whatever the prefix amplifies, the answer reflects.
 
 *Related: [[what-is-context]] · [[chats-vs-projects]] · [[iterating-on-prompts]]*
