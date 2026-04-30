@@ -22,7 +22,9 @@ Reading sits upstream. It is the diagnostic posture that decides which claims ar
 
 ## Output smells
 
-The patterns below are signals in the prose itself, not proof of error. Each is a reason to slow down on a passage and ask the verification question — the reading-side counterpart of the diagnostic from [[iterating-on-prompts]], where generic tone exposes an unnamed audience and a wrong-shaped artifact exposes an unnamed deliverable.
+The patterns below are signals in the prose itself, not proof of error. Each is a reason to slow down on a passage and ask the verification question.
+
+The reading-side diagnostic mirrors the prompting-side one set out in [[iterating-on-prompts]]: generic tone exposes an unnamed audience, a wrong-shaped artifact exposes an unnamed deliverable.
 
 | What to notice                                                                          | What it usually means                                                          | What to check                                                                          |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -31,7 +33,7 @@ The patterns below are signals in the prose itself, not proof of error. Each is 
 | **Smoothed contradictions.** The output reconciles tensions the prompter knows are real. | The model is averaging across positions rather than naming the disagreement.    | What the prose flattened, and whether the real claim survives once the tension is restored. |
 | **Hedge-shaped certainty.** Phrases like *it is important to note*, *various studies suggest*, *in many cases*. | The hedge is filler standing in for a claim the model could not make precisely. | Whether anything testable lives behind the hedge, or whether the sentence collapses if the hedge is removed. |
 | **Naming drift.** Proper nouns that almost match a real thing — a paper, a function, a feature, a person. | The model produced the *shape* of a name from neighboring training material.    | Spelling, attribution, and existence. A name that resists a single search is the default to disbelieve. |
-| **Echoed prompt vocabulary.** The output hands the prompter's nouns back as if they were the answer. | The model is mirroring the prompt rather than engaging the underlying question. | Whether any sentence makes a claim that was not already inside the prompt.             |
+| **Echoed prompt vocabulary.** Distinctive nouns and phrases from the prompt show up unchanged in the output. | The model is restyling the prompt rather than answering it; "your strategic positioning" comes back because the prompt said "strategic positioning". | Whether the output uses any vocabulary the prompt did not seed, or whether it is the prompt rephrased. |
 
 Smells are not verdicts. They are reasons to look closer.
 
@@ -39,7 +41,7 @@ Smells are not verdicts. They are reasons to look closer.
 
 One question subsumes the rest. Run it on any passage before passing the artifact on:
 
-> Could the reader defend this sentence to someone who asked where it came from, without saying *the model wrote it*?
+> Could the reader defend this sentence without crediting the model?
 
 If the answer is no, the passage has not been read. It has been received. The reader is now one step downstream of the sender of slop, with the verification work outsourced to whoever opens the document next. The four engagement tests in [[how-not-to-produce-ai-slop]] cover the production side of this instinct; the carry-away test is the reading-side version of the same move.
 
@@ -55,6 +57,6 @@ A reader who only verifies ships drafts whose framing was never their own. A rea
 
 ## What the practice is
 
-A senior editor reading a junior writer's draft trusts the prose least where it flows most easily. The same instinct, brought to AI output, turns reading into the work it should have been all along — a slow pass over the smooth places, a search for the decisions the model made by averaging, a list of what to check and what to ask again.
+A senior editor reading a junior writer's draft trusts the prose least where it flows most easily. The same instinct turns reading AI output into the work it should have been: a slow pass over the smooth places, a search for the decisions the model made by averaging, a list of what to check and what to ask again.
 
 *Related: [[iterating-on-prompts]] · [[the-intern-frame]] · [[how-not-to-produce-ai-slop]]*
