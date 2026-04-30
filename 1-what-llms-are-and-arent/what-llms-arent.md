@@ -37,7 +37,7 @@ A model stores patterns in weights set at training time. There is no "current"; 
 - Anything time-sensitive is unsafe by default. Pricing, leadership, scores, regulations, the version number of a library — the model cannot tell you whether what it knows is months or years out of date.
 - Anything specific the model "remembers" — your customer's account, your document's exact wording, the precise number from a report — is reconstruction. Often plausible. Sometimes wrong in ways that read as correct.
 
-<!-- diagram lands here: model-sees-vs-you-see.png -->
+![[model-sees-vs-you-see.png]]
 
 The reader's giveaway: ask the model the same factual question twice across two sessions and watch the answers drift. A database does not drift. A pattern of plausible reconstructions does.
 
