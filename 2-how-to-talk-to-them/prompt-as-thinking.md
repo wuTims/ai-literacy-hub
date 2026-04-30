@@ -16,7 +16,7 @@ Read the prompt back as if it were the first paragraph of the answer. If it does
 
 Every behavior a prompter sees is downstream of next-token prediction over a learned probability distribution. The prompt picks the region of that distribution. When the prompt is vague, the region is wide, and the model lands on the median of the wide region — the version of the answer that fits the largest number of possible callers. That is what generic output is: the average of every project the model could have been asked about.
 
-Specificity narrows the region. The work of narrowing it is decision work — audience, constraints, format, examples — and it is work the prompter has to do, because the model has no way to do it on the prompter's behalf. Anthropic's prompting guidance puts the rule plainly: examples outperform adjectives, and clarity outperforms verbosity. A long prompt that hedges and gestures performs worse than a short prompt that decides.
+Specificity narrows the region. The work of narrowing it is decision work — audience, constraints, format, examples — and it is work the prompter has to do, because the model has no way to do it on the prompter's behalf. Examples outperform adjectives. Clarity outperforms verbosity. A long prompt that hedges and gestures performs worse than a short prompt that decides.
 
 | Prompt shape                          | What the model has to fill in                       | What the output tends to read like                 |
 |---------------------------------------|-----------------------------------------------------|----------------------------------------------------|

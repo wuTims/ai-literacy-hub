@@ -38,7 +38,7 @@ The table is a snapshot. Capabilities shift; check the dates in the frontmatter 
 | Web-grounded factual lookup                       | Workable — search opt-in            | Fits — search built in               | Strong — search is the default      | Workable — varies by surface         |
 | Spreadsheet operations on a live workbook         | Weak — no workbook access           | Workable — code interpreter on uploads| Workable — Sheets integration       | Strong — Excel-native                |
 
-Two patterns run through the table. Tasks dominated by *how much source the model has to hold* go to Claude on context window. Tasks dominated by *where the artifact lives* go to whichever vendor owns the surrounding software — Gemini for Google, Copilot for Microsoft. ChatGPT wins where the task needs ad-hoc tools without a host application.
+Two patterns run through the table. Tasks dominated by *how much source the model has to hold* go to Claude on context window. Tasks dominated by *where the artifact lives* go to whichever vendor owns the surrounding software — Gemini for Google, Copilot for Microsoft. ChatGPT fits where the task needs ad-hoc tools without a host application.
 
 ## When to step outside the chat interface entirely
 
