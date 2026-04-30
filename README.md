@@ -1,0 +1,34 @@
+---
+title: AI Literacy Hub
+created: 2026-04-30
+updated: 2026-04-30
+status: draft
+tags: [meta, hub-root]
+---
+
+# AI Literacy Hub
+
+What separates a useful AI-generated artifact from slop is rarely the model. It's whether the person who prompted it formed a connection to their own work along the way. This hub exists to make that connection a habit for the people who use AI daily without writing code — designers, PMs, ops, customer success, students, and the friends and teammates who keep asking what to do with these tools.
+
+The thesis is slop-aversion. Every page is downstream of one claim: an AI-generated artifact is only useful if the person who produced it engaged with it. Mental models, prompting, context, and tool choice all serve that habit. None of them substitute for it.
+
+## Audience
+
+The reader has basic computer literacy and has used ChatGPT, Claude, or a comparable chatbot at least a few times. The reader does not write code, does not want to write code, and is not assumed to know any AI-specific vocabulary beyond the chatbot interface.
+
+## How to read this
+
+The graph is self-directed. Pages cross-link aggressively within their section and link out where the topic demands it.
+
+- [[start-here]] — recommended reading order for readers who want a path rather than a graph.
+- [[how-not-to-produce-ai-slop]] — the load-bearing example. Every other page calibrates against it. Read it first if nothing else.
+
+## Out of scope
+
+- Coding instruction. The hub teaches how to think with AI, not how to build with it.
+- Comprehensive coverage of every model, feature, and technique. The hub curates aggressively and dates quickly when it doesn't.
+- Public distribution. The hub is private-by-default; pages travel hand-to-hand.
+
+---
+
+*Related: [[start-here]] · [[how-not-to-produce-ai-slop]]*

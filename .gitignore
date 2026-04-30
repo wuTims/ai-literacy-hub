@@ -1,0 +1,5 @@
+_drafts/
+.DS_Store
+*.tmp
+.obsidian/workspace*
+.obsidian/cache
