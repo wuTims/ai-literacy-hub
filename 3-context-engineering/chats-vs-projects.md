@@ -12,36 +12,28 @@ Every chat starts with an empty window. Whatever should outlive that chat — in
 
 Products give that "somewhere" a name. Claude calls it a Project. OpenAI calls it a custom GPT. Google calls it a Gem. The shape underneath is the same: a named container that prepends instructions, and often files, into every chat opened inside it.
 
-## Three primitives, one mechanism
+## Three primitives
 
 The window itself does not change between products (see [[what-is-context]] for what sits inside it). What changes is *who supplies the prefix* and *how long that supply lasts*.
 
 ```
 A SINGLE CHAT
 ─────────────────────────────────────────────────────────────
-  • The window exists for this session.
-  • Closing the tab may persist the transcript so it can be
-    reopened, but a brand-new chat starts empty.
-  • Anything you typed earlier today, in another chat, is
-    not part of this one.
+  Window exists for this session. New chat = empty window.
 
 A PROJECT / CUSTOM GPT / GEM
 ─────────────────────────────────────────────────────────────
-  • A named container with a persistent preamble — system
-    instructions, often attached files, sometimes saved notes.
-  • Each chat inside the container still has its own window.
-  • The preamble is prepended into every such window before
-    the user's first message.
+  A named container with a persistent preamble — system
+  instructions, often files. Each chat inside still has
+  its own window; the preamble prepends into every one.
 
 A NEW CHAT
 ─────────────────────────────────────────────────────────────
-  • An explicit reset of the window.
-  • Inside a project, the preamble carries; the conversation
-    does not.
-  • Outside a project, both are gone.
+  Explicit reset of the window. Inside a project the
+  preamble carries; the conversation does not.
 ```
 
-A chat is transient working memory. A project is a way of saying "every chat I open here should start with these instructions in front of it." A new chat is the act of throwing away accumulated turns on purpose. The choice among the three is a choice about what to carry forward.
+A chat is transient working memory. A project is a way of saying "every chat I open here should start with these instructions in front of it." A new chat is the act of throwing away accumulated turns on purpose.
 
 <!-- diagram lands here: chat-vs-project-state.png -->
 
@@ -51,7 +43,7 @@ A chat is transient working memory. A project is a way of saying "every chat I o
 |----------------------------------------------------------------------|-------------------------------------------------|--------------------------------------------------------------------|
 | Recurring task with stable instructions (weekly review, house style) | Project / GPT / Gem                             | The preamble carries; you stop re-pasting the same setup.          |
 | One-off task unrelated to anything you have been working on          | Fresh chat, no project                          | No prior turns to bias the output, no inherited preamble.          |
-| Branch off this chat but the history is now in the way               | New chat (inside the same project, if any)      | Preamble survives, conversation does not.                          |
+| Explore a parallel direction without losing the current thread       | New chat (inside the same project, if any)      | Original chat stays open; the new one starts from the preamble alone. |
 | The next question depends on what was just said                      | Continue the current chat                       | The state is already in the window; do not reset it.               |
 | Sensitive material — HR, legal, unreleased numbers                   | New chat with persistence settings reviewed     | Constrain what gets retained before you paste anything.            |
 | Same instructions, many independent threads                          | Project / GPT / Gem                             | One preamble, many chats, no cross-contamination between them.     |
@@ -68,7 +60,5 @@ The table is not exhaustive, but the pattern is: a project is for *what should a
 ## What the choice actually is
 
 Reaching for a project, opening a fresh chat, or hitting "new chat" inside the project you are already in — these look like UI decisions and read like one in product menus. They are not. Each one is a decision about which tokens are sitting in front of the model the next time it is asked something. The interface names the choice; the choice is yours.
-
-The container you pick is the context the next chat will start from. Pick it on purpose.
 
 *Related: [[what-is-context]] · [[feeding-the-model]] · [[which-tool-when]]*
