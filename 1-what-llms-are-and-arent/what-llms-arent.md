@@ -47,7 +47,7 @@ A classical reasoner — a calculator, a SAT solver, a database query planner �
 
 Prompting the model with *think step by step* produces text that resembles step-by-step reasoning. Sometimes the resemblance is faithful: the steps are valid and the conclusion follows. Sometimes the steps look right and the final answer does not follow from them, because the final answer is also a token prediction, not a result derived from the steps above it.
 
-Reasoning-tuned models stretch the chain — trained to think aloud at length before committing. The substrate does not change. A longer chain of plausible text is still plausible text.
+Reasoning-tuned models stretch the chain — trained to think aloud at length before committing. The substrate does not change. A longer chain of plausible text is still plausible text. The same mechanism produces fabrication on factual claims — see [[why-they-hallucinate]].
 
 The reader's giveaway: an arithmetic answer that looks worked-through and is wrong; a "therefore" whose last step does not follow from the previous one; a confident final claim despite a broken middle.
 

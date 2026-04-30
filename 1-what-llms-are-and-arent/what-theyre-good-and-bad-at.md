@@ -59,4 +59,4 @@ Capability does not increase along a single axis the reader can chart. A new rel
 
 The point of the table is not to remember which row goes where. It's to internalize that any new task lands somewhere on a frontier that does not align with human difficulty, and that the only honest way to find out is to try the task and check the output. Hold the categories. Re-test the rows. The good-at column is wider than most readers expect. The bad-at column is sharper-edged than most readers fear.
 
-*Related: [[what-llms-are]] · [[why-they-hallucinate]] · [[how-not-to-produce-ai-slop]]*
+*Related: [[what-llms-arent]] · [[why-they-hallucinate]] · [[how-not-to-produce-ai-slop]]*

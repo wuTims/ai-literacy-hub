@@ -62,7 +62,7 @@ A refusal — *no record of that paper* — is itself a token sequence the model
 
 ## Shapes and verification
 
-The same mechanism shows up in several recognizable surfaces. Treating fabrication as structural turns verification into a mechanical step.
+The same mechanism shows up in several recognizable surfaces. Treating fabrication as structural turns verification into a mechanical step. The categories of weakness — see [[what-theyre-good-and-bad-at]] — are stable; the rows shift.
 
 | Shape | What it looks like | How to verify |
 |---|---|---|
