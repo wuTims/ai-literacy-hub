@@ -47,7 +47,7 @@ A classical reasoner — a calculator, a SAT solver, a database query planner �
 
 Prompting the model with *think step by step* produces text that resembles step-by-step reasoning. Sometimes the resemblance is faithful: the steps are valid and the conclusion follows. Sometimes the steps look right and the final answer does not follow from them, because the final answer is also a token prediction, not a result derived from the steps above it.
 
-Reasoning-tuned models extend the trick — trained to think aloud at length before committing — and the gain on hard problems is real. The substrate is still token-by-token generation. The improvement is bounded by what longer chains of plausible text can recover.
+Reasoning-tuned models stretch the chain — trained to think aloud at length before committing. The substrate does not change. A longer chain of plausible text is still plausible text.
 
 The reader's giveaway: an arithmetic answer that looks worked-through and is wrong; a "therefore" whose last step does not follow from the previous one; a confident final claim despite a broken middle.
 
@@ -59,12 +59,12 @@ Each category error has a recognizable shape in everyday use:
 - Asking for a list of citations on a niche topic and forwarding the list. (Search-engine error.)
 - Asking for a multi-step financial or legal calculation in prose and trusting the result without re-deriving it. (Reasoner error.)
 - Asking what a court ruled last week, or what a stock closed at yesterday. (Database and search-engine errors stacked.)
-- Asking the model to *double-check its own answer* and treating agreement as verification. The model is generating more text in the same direction, not auditing.
+- Asking the model to *double-check its own answer* and treating agreement as verification. (Reasoner error — sampling more text is not auditing.)
 
 The pattern across all five: the prompter expected lookup, storage, or computation, and got language. The output reads like the thing requested. The substance underneath is something else.
 
 ## The single frame
 
-A tool that manipulates language well is not a tool that knows things, looks them up, or thinks them through. Hold the first claim and the failures of the other three stop being surprises.
+A tool that manipulates language well is not a tool that knows things, looks them up, or thinks them through. Hold the first claim and the other three become predictable shapes of failure.
 
 *Related: [[what-llms-are]] · [[why-they-hallucinate]] · [[how-not-to-produce-ai-slop]]*
