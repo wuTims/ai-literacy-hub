@@ -36,7 +36,7 @@ The pattern down the table is the same shape every row: the dump asks the model 
 
 **Quote before answering.** Asking the model to surface the relevant passages from the source before it answers is a forcing function for grounded output. A model that has just quoted the paragraph it is relying on writes a different next paragraph than one asked for a conclusion straight away. The quoting step makes the retrieval visible and checkable.
 
-<!-- diagram lands here: context-management-flow.png -->
+![[context-management-flow.png]]
 
 ## A structural template
 
