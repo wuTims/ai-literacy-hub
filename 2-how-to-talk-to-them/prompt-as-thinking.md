@@ -71,4 +71,4 @@ A clear opening prompt is necessary and not sufficient. Reading the output, find
 
 A prompt is a question with the shape of the answer already inside it. The clearer the shape, the less the model has to invent on the prompter's behalf, and the more the output belongs to the prompter rather than the average of everyone who has ever asked something similar.
 
-*Related: [[the-intern-frame]] · [[iterating-on-prompts]] · [[how-not-to-produce-ai-slop]]*
+*Related: [[the-intern-frame]] · [[reading-the-output]] · [[how-not-to-produce-ai-slop]]*

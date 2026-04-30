@@ -47,7 +47,7 @@ The behaviors that follow are concrete:
 
 - Restate the project, the audience, and the goal at the top of every fresh conversation. Do not assume yesterday's thread carries over.
 - Ask for variants in bulk — five subject lines, three opening paragraphs, ten alternative phrasings — and pick. Do not ask for one answer and accept it.
-- Re-prompt without apology when the first response is wrong. The coworker has no feelings about being corrected.
+- Re-prompt without apology when the first response is wrong — see [[iterating-on-prompts]]. The coworker has no feelings about being corrected.
 - Hand over the reference material the coworker would need if walking into the topic cold — the meeting notes, the prior version, the constraint document.
 - Push back when the model is wrong. Revise when it is right and the wording still misses.
 - Treat the model's confident-sounding agreement as a continuation, not a verification. Re-ask if certainty matters.

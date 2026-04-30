@@ -43,7 +43,7 @@ One question subsumes the rest. Run it on any passage before passing the artifac
 
 > Could the reader defend this sentence without crediting the model?
 
-If the answer is no, the passage has not been read. It has been received. The reader is now one step downstream of the sender of slop, with the verification work outsourced to whoever opens the document next. The four engagement tests in [[how-not-to-produce-ai-slop]] cover the production side of this instinct; the carry-away test is the reading-side version of the same move.
+If the answer is no, the passage has not been read. It has been received. The reader is now one step downstream of the sender of slop, with the verification work outsourced to whoever opens the document next.
 
 ## Reading and re-prompting
 
@@ -51,7 +51,7 @@ A careful reading produces two lists, and they ask for different responses.
 
 The verification list is the set of factual claims to confirm — names, numbers, citations, code that has to run. The work is mechanical and the tools are the ones the prompter would have used before AI existed: a search, a primary source, an executor.
 
-The re-prompt list is the set of passages the model glossed because the prompt left room — generic structure, smoothed contradictions, echoed vocabulary. These do not get fixed by editing the wording. They get fixed by changing the prompt and running it again, the move that [[the-intern-frame]] makes cheap by removing any awkwardness about correcting the coworker.
+The re-prompt list is the set of passages the model glossed because the prompt left room — generic structure, smoothed contradictions, echoed vocabulary. These do not get fixed by editing the wording. They get fixed by changing the prompt and running it again, the move that [[the-intern-frame]] removes the awkwardness from — correcting the coworker takes nothing.
 
 A reader who only verifies ships drafts whose framing was never their own. A reader who only re-prompts ships drafts that read well and assert things that are not true. The two lists are not optional alternatives.
 
