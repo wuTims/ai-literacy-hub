@@ -71,8 +71,4 @@ When several of these fire together, a better prompt is not the answer.
 
 When most of these fire at once, the next step might not be a better chat tool. It might be engineering the surface itself. See [[when-workflows-graduate]].
 
-## Fit, not future
-
-Chat is not outdated. Agents are not required. The right interaction model depends on whether the work has a fast verification loop and whether the steps live inside one document or across many. Use the chatbot when the work *is* the talking. Reach for the agent when the work happens *between* the talking.
-
 *Related: [[which-tool-when]] · [[personal-workflows]] · [[when-workflows-graduate]]*
