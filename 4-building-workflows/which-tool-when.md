@@ -20,7 +20,7 @@ Each of the four occupies a slot defined by a small number of properties.
 
 - **Claude.** Default output skews longer-form and structured. Reliable on long pasted source. Strong fit when the task is to read a lot of source material and produce a careful artifact.
 - **ChatGPT.** Broadest first-party tool surface — image generation, voice, file analysis, custom GPTs, web search. Strong fit when the task needs more than chat and the alternative is wiring up several products.
-- **Gemini.** Tight integration with Google Workspace — Gmail, Docs, Drive, Calendar. Web-grounded answers by default. Strong fit when the artifact already lives in Google's stack or the question is about current public information.
+- **Gemini.** Tight integration with Google Workspace — Gmail, Docs, Drive, Calendar; Workspace Intelligence (Apr 2026) reads across the suite. Web-grounded answers by default. Strong fit when the artifact already lives in Google's stack or the question is about current public information.
 - **Copilot (Microsoft 365).** Embedded inside Word, Excel, Outlook, and Teams. The artifact never leaves the document. Weakest of the four as a standalone chat; strongest as an in-document assistant when the file is already open.
 
 ## The decision matrix

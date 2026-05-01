@@ -33,9 +33,9 @@ Anthropic draws a finer line inside the "agent" half — a workflow follows pred
 Agentic capability is already inside the chat tools you use. The question is task-fit, not access. ([[which-tool-when]] handles the cross-tool comparison; this page handles the chat-vs-agent line.)
 
 - **ChatGPT.** Tasks and scheduled runs; tool calls inside conversations.
-- **Claude.** Tool use inside Projects; computer use via API and select desktop surfaces.
-- **Gemini in Workspace.** Drafting, scheduling, and sending across Gmail, Calendar, and Drive.
-- **Microsoft 365 Copilot.** In-app actions inside Word, Excel, Outlook, and Teams; named agents alongside.
+- **Claude.** Tool use via Projects and Connectors; computer use via API and the desktop app; Routines for cloud-hosted scheduled runs.
+- **Gemini in Workspace.** Drafting, scheduling, and sending across Gmail, Calendar, and Drive; Workspace Intelligence reads across the suite (Apr 2026); Scheduled Actions for recurring prompts.
+- **Microsoft 365 Copilot.** Agent Mode in Word, Excel, and PowerPoint (GA Apr 2026); named Word/Excel/PowerPoint Agents in Copilot chat; in-app actions across Outlook and Teams.
 
 A reader who has only typed into the chat box has been on the chatbot side by default. Stepping over the line is a noticing problem, not an access problem.
 
