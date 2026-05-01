@@ -1,7 +1,7 @@
 ---
 title: Iterating on prompts
 created: 2026-04-30
-updated: 2026-04-30
+updated: 2026-05-01
 status: draft
 tags: [prompting, iteration]
 ---

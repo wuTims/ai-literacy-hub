@@ -1,7 +1,7 @@
 ---
 title: How not to produce AI slop
 created: 2026-04-30
-updated: 2026-04-30
+updated: 2026-05-01
 status: golden-example
 tags: [foundations, habits, slop]
 ---

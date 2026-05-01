@@ -1,7 +1,7 @@
 ---
 title: AI Literacy Hub
 created: 2026-04-30
-updated: 2026-04-30
+updated: 2026-05-01
 status: draft
 tags: [meta, hub-root]
 ---
