@@ -8,7 +8,7 @@ tags: [meta, references]
 
 # Curated links
 
-These are the sources the hub leans on. Each one earns its slot by carrying a specific framing the hub does not try to reproduce — paste the source, do not paraphrase it. The set is opinionated, not exhaustive.
+These are the sources the hub leans on. Each one earns its slot by carrying a specific framing the hub points to rather than reproduces. The set is opinionated, not exhaustive.
 
 ## Vendor docs
 
@@ -31,6 +31,6 @@ These are the sources the hub leans on. Each one earns its slot by carrying a sp
 
 ## Empirical anchor
 
-- **MIT Media Lab** — *Your Brain on ChatGPT* (2025) — `[VERIFY URL]` — The empirical reference behind the slop-aversion thesis. Cited at most twice in the hub by design; listed here so readers can reach the primary source without the hub leaning on it again.
+- **MIT Media Lab** — [*Your Brain on ChatGPT* (2025)](https://www.media.mit.edu/publications/your-brain-on-chatgpt/) — The empirical reference behind the slop-aversion thesis. Cited at most twice in the hub by design; listed here so readers can reach the primary source without the hub leaning on it again.
 
 *Related: [[start-here]] · [[how-not-to-produce-ai-slop]]*
