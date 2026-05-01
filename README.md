@@ -29,6 +29,10 @@ The graph is self-directed. Pages cross-link aggressively within their section a
 - Comprehensive coverage of every model, feature, and technique. The hub curates aggressively and dates quickly when it doesn't.
 - Public distribution. The hub is private-by-default; pages travel hand-to-hand.
 
+## Refresh cadence
+
+Sections 1-3 are stable. Section 4 (tools and workflows) ages fastest and is reviewed quarterly. The `updated` date in each page's frontmatter is the ground truth.
+
 ---
 
 *Related: [[start-here]] · [[how-not-to-produce-ai-slop]]*
