@@ -104,4 +104,4 @@ Every page about prompting, context engineering, or workflow design is downstrea
 
 ---
 
-*Related: [What LLMs are and aren't] · [How to actually talk to them] · [When AI is the wrong tool]*
+*Related: [[what-llms-are]] · [[prompt-as-thinking]] · [[which-tool-when]]*
