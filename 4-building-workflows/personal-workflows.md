@@ -2,7 +2,7 @@
 title: Personal workflows
 created: 2026-04-30
 updated: 2026-05-01
-status: draft
+status: active
 tags: [workflows, examples]
 ---
 
