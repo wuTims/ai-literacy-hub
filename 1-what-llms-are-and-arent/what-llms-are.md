@@ -71,13 +71,9 @@ The pattern in the left column: the facts are *in the prompt*, and the model rea
 
 The calculator analogy has one acknowledged weakness, which Willison flags himself. A pocket calculator is deterministic; an LLM is not. Two identical prompts can yield different answers, and a prompt that worked yesterday may not work today after a model update. Build with tolerances. Verify outputs the way an engineer verifies a measurement, not the way a user trusts a search result.
 
-## What it is not
+## What follows
 
-Three negations are worth stating plainly, even though each has its own page:
-
-- An LLM is not a search engine. It does not look anything up.
-- An LLM is not a database. Anything it "knows" is encoded in weights, lossy and undated.
-- An LLM is not a reasoner in the classical sense. It produces text that often *resembles* reasoning, which is a different thing from doing it.
+The three category errors that follow from "calculator for words" — not a search engine, not a database, not a reasoner — are spelled out next, on [[what-llms-arent]].
 
 A richer framing — the LLM as the kernel of an emerging operating system, coordinating tools, memory, and external systems — is useful, but it belongs downstream. For the foundation, the calculator-for-words frame does more work and makes fewer promises.
 
