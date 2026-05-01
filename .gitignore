@@ -3,3 +3,4 @@ _drafts/
 *.tmp
 .obsidian/workspace*
 .obsidian/cache
+.playwright-mcp/
