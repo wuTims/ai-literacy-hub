@@ -80,6 +80,4 @@ The same caution applies to attached files. A file in a container is not knowled
 
 Choosing the source, ordering it before the ask, drawing the boundary around what to ignore — these are decisions that produce the answer, not steps before it. A clean prefix is the work the model amplifies. A messy prefix gets amplified with the same fidelity.
 
-Curate the source. Order before the ask. Mark what to ignore. Whatever the prefix amplifies, the answer reflects.
-
 *Related: [[what-is-context]] · [[chats-vs-projects]] · [[iterating-on-prompts]]*
