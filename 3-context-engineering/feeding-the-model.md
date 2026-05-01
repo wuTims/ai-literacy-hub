@@ -76,7 +76,7 @@ Retrieval — letting an application fetch material from a larger corpus and inj
 
 The same caution applies to attached files. A file in a container is not knowledge the model has; it is material the application may surface when it decides the material is relevant. **The behavior to keep:** assume nothing is in front of the model unless the conversation makes it visible — quote, ask, or paste.
 
-## What this is
+## The prefix is the work
 
 Choosing the source, ordering it before the ask, drawing the boundary around what to ignore — these are decisions that produce the answer, not steps before it. A clean prefix is the work the model amplifies. A messy prefix gets amplified with the same fidelity.
 

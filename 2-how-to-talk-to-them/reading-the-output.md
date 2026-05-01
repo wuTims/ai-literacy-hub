@@ -55,7 +55,7 @@ The re-prompt list is the set of passages the model glossed because the prompt l
 
 A reader who only verifies ships drafts whose framing was never their own. A reader who only re-prompts ships drafts that read well and assert things that are not true. The two lists are not optional alternatives.
 
-## What the practice is
+## Reading like an editor
 
 A senior editor reading a junior writer's draft trusts the prose least where it flows most easily. The same instinct turns reading AI output into the work it should have been: a slow pass over the smooth places, a search for the decisions the model made by averaging, a list of what to check and what to ask again.
 

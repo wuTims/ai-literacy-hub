@@ -57,7 +57,7 @@ The table is not exhaustive, but the pattern is: a project is for *what should a
 - **Attached files are not background knowledge.** A file attached to a project reaches the model only when the application puts its text into the window. Treat project files as material the chat can pull from, not as a passive backdrop the model "knows about."
 - **A loose preamble pollutes every chat in the container.** A project whose instructions try to cover every possible task ships that clutter into every window it opens. Containers earn their keep when the instructions inside them are tight enough that you would still want them on the next chat.
 
-## What the choice is
+## The interface names the choice
 
 Reaching for a project, opening a fresh chat, or hitting "new chat" inside the project you are already in — these look like UI decisions and read like one in product menus. They are not. Each one is a decision about which tokens are sitting in front of the model the next time it is asked something. The interface names the choice; the choice is yours.
 
