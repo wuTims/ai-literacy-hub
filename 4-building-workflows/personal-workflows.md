@@ -8,14 +8,14 @@ tags: [workflows, examples]
 
 # Personal workflows
 
-Four worked examples. Research, writing, summarizing, planning. Each example follows the same three-stage shape — prompt, context provided, output handling — and the shape is the point. The examples differ on surface; the method does not.
+The same three-stage shape — prompt, context provided, output handling — runs across research, writing, summarizing, and planning. The surface differs; the method does not.
 
-| Task type    | What changes from the previous example                                              |
-|--------------|-------------------------------------------------------------------------------------|
-| Research     | The source is partial; the prompt scopes what to gather and how to gate it.         |
-| Writing      | The prompter is the author; context names voice, recipient, and stakes.             |
-| Summarizing  | The source is complete and pasted; the prompt names the reader and the decision.    |
-| Planning     | The artifact is a sequence; output handling surfaces the model's hidden assumptions.|
+| Task type    | What this example focuses on                                                                            |
+|--------------|---------------------------------------------------------------------------------------------------------|
+| Research     | Scoping the prompt to the audience and gating every claim through citations.                            |
+| Writing      | Naming the register, the recipient, and the stakes — so the draft does not regress to the median.       |
+| Summarizing  | Naming the reader and the decision so the model surfaces decision-relevant facts, not the document's structure. |
+| Planning     | Surfacing hidden assumptions, then revising from those rather than from the goal.                       |
 
 ## Research
 
@@ -102,8 +102,6 @@ OUTPUT HANDLING
   not the goal.
 ```
 
-## What stays the same
-
-Across the four examples, the prompt does one job: take back the decisions the model would otherwise make by averaging — audience, deliverable shape, source material, success criteria. The context block is the second half of that job, supplying the specifics the prompt promised. Output handling is the audit that closes the loop. Treat the three as one sequence rather than three steps, and the worked examples generalize to any task the prompter can describe in those terms.
+When the same template runs more than once a week, the worked example has graduated into a workflow — the next surface, not another chat. See [[when-workflows-graduate]].
 
 *Related: [[which-tool-when]] · [[iterating-on-prompts]] · [[when-workflows-graduate]]*
