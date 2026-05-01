@@ -39,7 +39,7 @@ The cost of producing text and code has dropped to near zero. The cost of *under
 
 When you ship an artifact you didn't engage with, you've quietly transferred the work of understanding onto whoever reads it next. That person now does two jobs: figure out what the artifact says, and figure out whether they can trust it. Across a team, the cost compounds.
 
-The MIT Media Lab's *Your Brain on ChatGPT* study (2025) found that participants who outsourced essay-writing to LLMs showed measurably reduced neural engagement and weaker recall of what they had "written." Skipping the thinking is the same as not having done the work, regardless of what file ends up on disk.
+The MIT Media Lab's *Your Brain on ChatGPT* preprint (Kosmyna et al., 2025; n=54, EEG) found that participants who outsourced essay-writing to LLMs showed measurably reduced neural engagement and weaker recall of what they had "written." A preprint with one cohort is not a settled finding, but the direction matches the mechanism: skipping the thinking is the same as not having done the work, regardless of what file ends up on disk.
 
 ## Four tests for engagement
 

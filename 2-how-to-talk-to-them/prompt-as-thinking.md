@@ -63,7 +63,7 @@ There is one test that subsumes the rest:
 
 If the answer is no, the prompt is asking the model to do thinking the prompter has not done. The model will produce something — that is what it does — but the something will be the average shape of that thinking across its training data. Generic, plausible, not yours.
 
-The MIT Media Lab's *Your Brain on ChatGPT* study (2025) is suggestive here: participants who delegated the framing of an essay to an LLM, not just the typing of it, showed reduced neural engagement and weaker recall of what they had produced. The finding fits the mechanism. The prompt is where the framing happens. Skip it, and there is no framing left to engage with.
+The MIT Media Lab's *Your Brain on ChatGPT* preprint (2025) is suggestive here: participants who delegated the framing of an essay to an LLM, not just the typing of it, showed reduced neural engagement and weaker recall of what they had produced. One preprint is not proof, but the direction fits the mechanism. The prompt is where the framing happens. Skip it, and there is no framing left to engage with.
 
 ## Iteration is part of the draft
 

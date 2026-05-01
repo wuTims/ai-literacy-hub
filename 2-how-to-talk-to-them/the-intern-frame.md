@@ -29,7 +29,7 @@ Each row is the prompter's job, not the model's. None of them get done by adopti
 
 ## Where the frame underclocks
 
-Mollick himself walked the intern frame back as primary advice. The reason: it caps the prompter's ambition. A prompter who treats the model as an intern asks for intern-grade work and gets it. Frontier models routinely exceed the ceiling of any intern role — while remaining as alien as the original frame warned. Holding the frame too tightly turns it into a self-imposed limit on what the prompter even thinks to request.
+Mollick himself walked the intern frame back as primary advice. The stated reason: it leads people to use AI in narrowly bounded ways, shaped by what they would ask of an actual intern. A prompter who treats the model as an intern asks for intern-grade work and gets it. Frontier models routinely exceed the ceiling of any intern role — while remaining as alien as the original frame warned. Holding the frame too tightly turns it into a self-imposed limit on what the prompter even thinks to request.
 
 The retraction is not a repudiation. The onboarding behaviors are still right. The ambition setting is what has to move.
 
