@@ -40,7 +40,7 @@ OUTPUT HANDLING
 
 ## Writing
 
-The model can draft what the prompter would have written — but only if the prompter has named the register, the recipient's pattern, and what is at stake. Without those, the output regresses to the median version of its genre and sounds like an email about anyone's project. The voice test runs after the draft: read it aloud. If it does not sound like the prompter, the failure is in the prompt's framing, not the prose. Iterate the prompt — see [[iterating-on-prompts]] — rather than wordsmith the output.
+The model can draft what the prompter would have written, but the default failure mode is regression to the median — an email that sounds about anyone's project, not about this one. The corrective is in the prompt, not the prose. Read the draft aloud. If it does not sound like the prompter, the framing failed; iterate the prompt — see [[iterating-on-prompts]] — rather than wordsmith the output.
 
 ```
 PROMPT
@@ -91,10 +91,12 @@ PROMPT
   assumptions you made to produce this plan.
 
 CONTEXT PROVIDED
-  - Goal, in one sentence.
-  - Current state: what exists, what does not.
-  - Constraints: budget, headcount, dependencies.
-  - Deadline.
+  - Goal: ship the redesigned onboarding flow by Q3.
+  - Current state: spec approved; two engineers, one designer
+    on the team; vendor SDK lands May 15.
+  - Constraints: no marketing headcount; legal review needed
+    before launch; analytics rebuild blocks the second milestone.
+  - Deadline: September 30.
 
 OUTPUT HANDLING
   Read the assumptions list before the plan. Strike the assumptions
@@ -102,6 +104,6 @@ OUTPUT HANDLING
   not the goal.
 ```
 
-When the same template runs more than once a week, the worked example has graduated into a workflow — the next surface, not another chat. See [[when-workflows-graduate]].
+When the same prompt-context-handling template runs every Monday — the manager email, the weekly plan, the standing summary — the worked example has graduated into a workflow. See [[when-workflows-graduate]].
 
 *Related: [[which-tool-when]] · [[iterating-on-prompts]] · [[when-workflows-graduate]]*
