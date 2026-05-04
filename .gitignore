@@ -4,3 +4,4 @@ _drafts/
 .obsidian/workspace*
 .obsidian/cache
 .playwright-mcp/
+.claude/*.lock
