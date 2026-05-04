@@ -1,30 +1,24 @@
 ---
 title: Reading the output
 created: 2026-04-30
-updated: 2026-05-01
+updated: 2026-05-03
 status: active
 tags: [reviewing, output]
 ---
 
 # Reading the output
 
-Read AI output the way an editor reads a colleague's draft — not for whether it is wrong, but for the kind of right that should be checked.
+Read AI output the way a careful editor reads a colleague's draft: looking for places that flow too smoothly to have been thought through. Smooth passages are usually where the model filled in a decision the prompter expected it to make.
 
-Fluency is not signal. The reader's job is to surface the places where the prose moves smoothly past a decision the model could not have made.
+## Reading is different from verification
 
-## Reading is not verification
+Verification is the mechanical step: open the link, run the code, trace the quote back to the source it claims (the mechanism is set out in [[why-they-hallucinate]]). The work is the same every time — confirm or deny, one claim at a time.
 
-Two moves. They look adjacent and they do different work.
-
-Verification is the mechanical step: open the link, run the code, trace the quote back to the source it claims. The mechanism is set out in [[why-they-hallucinate]] and the discipline is the same every time — confirm or deny, one claim at a time.
-
-Reading sits upstream. It is the diagnostic posture that decides which claims are worth the verification step. Without it, every line costs the same to check, and most lines get checked by nobody. A reader who treats fluent prose as evidence of correctness has skipped the diagnostic move and inherited whichever errors the model produced confidently.
+Reading comes first. Reading is what decides which claims are worth verifying. Without reading, every line costs the same to check and most lines get checked by nobody. A reader who trusts fluent prose ships whatever errors the model produced fluently.
 
 ## Output smells
 
-The patterns below are signals in the prose itself, not proof of error. Each is a reason to slow down on a passage and ask the verification question.
-
-The reading-side diagnostic mirrors the prompting-side one set out in [[iterating-on-prompts]]: generic tone exposes an unnamed audience, a wrong-shaped artifact exposes an unnamed deliverable.
+The patterns below are reasons to slow down on a passage. Each is a signal that the prose is doing one thing and the reader expected another.
 
 | What to notice                                                                          | What it usually means                                                          | What to check                                                                          |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -35,28 +29,24 @@ The reading-side diagnostic mirrors the prompting-side one set out in [[iteratin
 | **Naming drift.** Proper nouns that almost match a real thing — a paper, a function, a feature, a person. | The model produced the *shape* of a name from neighboring training material.    | Spelling, attribution, and existence. A name that resists a single search is the default to disbelieve. |
 | **Echoed prompt vocabulary.** Distinctive nouns and phrases from the prompt show up unchanged in the output. | The model is restyling the prompt rather than answering it; "your strategic positioning" comes back because the prompt said "strategic positioning". | Whether the output uses any vocabulary the prompt did not seed, or whether it is the prompt rephrased. |
 
-Smells are not verdicts. They are reasons to look closer.
+When one of these fires, the next move is to verify the specific claim. The signal does not mean the whole passage is wrong.
 
 ## The carry-away test
 
-One question subsumes the rest. Run it on any passage before passing the artifact on:
+The single question to ask of any passage before passing the artifact on:
 
 > Could the reader defend this sentence without crediting the model?
 
-If the answer is no, the passage has not been read. It has been received. The reader is now one step downstream of the sender of slop, with the verification work outsourced to whoever opens the document next.
+If the answer is no, the reader has not engaged with the passage; the next reader inherits the work of figuring out whether to trust it. The four engagement tests in [[how-not-to-produce-ai-slop]] are the production-side version of this question; the carry-away test is the reading-side equivalent.
 
 ## Reading and re-prompting
 
-A careful reading produces two lists, and they ask for different responses.
+A careful read produces two lists, and they ask for different responses.
 
-The verification list is the set of factual claims to confirm — names, numbers, citations, code that has to run. The work is mechanical and the tools are the ones the prompter would have used before AI existed: a search, a primary source, an executor.
+The verification list is the set of factual claims to confirm: names, numbers, citations, code that has to run. The work is mechanical and the tools are the ones the prompter would have used before AI existed — a search, a primary source, an executor.
 
-The re-prompt list is the set of passages the model glossed because the prompt left room — generic structure, smoothed contradictions, echoed vocabulary. These do not get fixed by editing the wording. They get fixed by changing the prompt and running it again, the move that [[the-intern-frame]] removes the awkwardness from — correcting the coworker takes nothing.
+The re-prompt list is the set of passages the model glossed because the prompt left room: generic structure, smoothed contradictions, echoed vocabulary. These get fixed by changing the prompt and running it again. Editing the wording leaves the same gloss in place for the next prompt. Re-prompting feels expensive without the coworker frame from [[the-intern-frame]].
 
-A reader who only verifies ships drafts whose framing was never their own. A reader who only re-prompts ships drafts that read well and assert things that are not true. The two lists are not optional alternatives.
-
-## Reading like an editor
-
-A senior editor reading a junior writer's draft trusts the prose least where it flows most easily. The same instinct turns reading AI output into the work it should have been: a slow pass over the smooth places, a search for the decisions the model made by averaging, a list of what to check and what to ask again.
+Both lists need to clear before the artifact gets passed on.
 
 *Related: [[iterating-on-prompts]] · [[the-intern-frame]] · [[how-not-to-produce-ai-slop]]*

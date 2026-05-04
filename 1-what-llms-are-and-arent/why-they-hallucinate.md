@@ -1,22 +1,22 @@
 ---
 title: Why they hallucinate
 created: 2026-04-30
-updated: 2026-05-01
+updated: 2026-05-03
 status: active
 tags: [foundations, hallucination, mental-models]
 ---
 
 # Why they hallucinate
 
-Fabrication is not a bug in an LLM. It is what the mechanism does on inputs where the training signal was thin, in the same fluent surface it uses on inputs the training signal covered well.
+When training data on a topic is thin, the model still produces an answer in the same fluent prose it uses on well-covered topics.
 
 The industry settled on the word *hallucination*. The closer description is **persuasive approximation**: the model produces text shaped like an answer, with no separate check that the answer exists.
 
 ## Where fabrication comes from
 
-Every output token is sampled from a probability distribution shaped by training. No second channel runs underneath to mark which regions of that distribution are well-supported and which are extrapolation. The model emits the most plausible-looking continuation in either case, and fluency is identical on both.
+Every output token is sampled from a probability distribution shaped by training. Nothing in the model marks which of those tokens come from well-covered training data and which are guesses. The model emits the most plausible-looking continuation in either case, and fluency is identical on both.
 
-There is no internal *not sure* signal the reader can trust. Confidence in the output is a property of the prose, not of the underlying knowledge.
+There is no internal *not sure* signal the reader can trust.
 
 ## The mechanism, step by step
 
@@ -50,19 +50,19 @@ prompt:    "Cite a 2021 ACL paper on retrieval-augmented
              position and globally non-existent
 ```
 
-Every step was the most reasonable token given everything before it. Nothing in the process consulted a list of real papers, because the model has no list to consult. The same procedure produces a correct citation when the paper was heavily represented in training, and a fabricated one when it was not — fluent surface in both cases.
+Every step was the most reasonable token given everything before it. The model has no list of real papers to consult; it produces a correct citation when the paper was heavily represented in training, and a fabricated one when it was not.
 
 ## Why confidence is uncalibrated
 
-Probability distributions inside the model are over *tokens*, not over *correctness*. A token can carry probability 0.95 because the *phrasing* is highly likely in the training data, while the *fact it asserts* is unsupported. The two are unrelated.
+Probability distributions inside the model are over *tokens*, not over *correctness*. The phrasing of a sentence can be highly probable in the training data even when the fact it asserts is not.
 
-Asking the model "are you sure?" generates more text from the same machine. Agreement is not verification; disagreement is not retraction. Both are continuations sampled the same way as every other token.
+Asking the model "are you sure?" generates more text from the same machine; whether the model agrees or disagrees tells you nothing about whether the original answer was correct.
 
-A refusal — *no record of that paper* — is itself a token sequence the model must find more probable than the alternatives. On most prompts it does not.
+A refusal is just another candidate output the model has to rank above the alternatives — and on most prompts, fabrication wins.
 
 ## Shapes and verification
 
-The same mechanism shows up in several recognizable surfaces. Treating fabrication as structural turns verification into a mechanical step. The categories of weakness — see [[what-theyre-good-and-bad-at]] — are stable; the rows shift.
+Fabrication takes recognizable shapes. Each has its own verification step.
 
 | Shape | What it looks like | How to verify |
 |---|---|---|
@@ -74,10 +74,6 @@ The same mechanism shows up in several recognizable surfaces. Treating fabricati
 
 ## Partial mitigations, not fixes
 
-Search-augmented and retrieval-augmented setups paste real documents into the prompt before the model answers. This *reduces* fabrication on the topics the retrieved documents cover, because the model is now manipulating text the prompter supplied — the task it does well. It does not eliminate fabrication. The model can still produce a confident statement absent from the retrieved documents, or stitch fragments together in ways that distort the source. Retrieval is a forcing function for verification, not a replacement for it.
-
-## Verification as a step, not a verdict
-
-Persuasive approximation is the mechanism's default on thin signal. Verification is the workflow it sits inside — the way an engineer reads a measurement: noted, then checked.
+Search-augmented and retrieval-augmented setups paste real documents into the prompt before the model answers. This *reduces* fabrication on the topics the retrieved documents cover, because the model is now manipulating text the prompter supplied — the task it does well. It does not eliminate fabrication. A customer-support assistant fed the company's refund policy is unlikely to invent a refund window of "60 days" when the policy says 30 — the right number is right there. It can still misquote the conditions, blend two clauses into one, or produce a confident answer to an adjacent question the policy never addresses.
 
 *Related: [[what-llms-are]] · [[what-llms-arent]] · [[how-not-to-produce-ai-slop]]*

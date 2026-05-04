@@ -1,25 +1,25 @@
 ---
 title: Personal workflows
 created: 2026-04-30
-updated: 2026-05-01
+updated: 2026-05-03
 status: active
 tags: [workflows, examples]
 ---
 
 # Personal workflows
 
-The same three-stage shape — prompt, context provided, output handling — runs across research, writing, summarizing, and planning. The surface differs; the method does not.
+Research, writing, summarizing, and planning all use the same three stages: prompt, context provided, output handling.
 
 | Task type    | What this example focuses on                                                                            |
 |--------------|---------------------------------------------------------------------------------------------------------|
 | Research     | Scoping the prompt to the audience and gating every claim through citations.                            |
 | Writing      | Naming the register, the recipient, and the stakes — so the draft does not regress to the median.       |
-| Summarizing  | Naming the reader and the decision so the model surfaces decision-relevant facts, not the document's structure. |
+| Summarizing  | Naming the reader and the decision so the output leads with decision-relevant facts rather than the document's headings. |
 | Planning     | Surfacing hidden assumptions, then revising from those rather than from the goal.                       |
 
 ## Research
 
-Research with a language model is not a search — language models make poor search engines. It is triage over source material the prompter has scoped, with the model proposing leads to chase down. Naming a non-expert audience changes what comes back: jargon drops, framing shifts, and the leads become readable rather than canonical. Citations are the gate. Anything the model offers without a verifiable source is a hypothesis, not a finding.
+Language models are not search engines; treat research with one as triage. The prompter scopes the source material, the model proposes leads to chase down, and the prompter checks each one. A typical flow: feed the model ten papers and ask for the three that bear on a specific question, with the relevant excerpts. Naming a non-expert audience changes the output: less jargon, plainer framing, fewer canonical-sounding citations the reader can't actually open. Require a citation for every claim. Treat any uncited claim as a hypothesis to verify.
 
 ```
 PROMPT
@@ -40,7 +40,7 @@ OUTPUT HANDLING
 
 ## Writing
 
-The model can draft what the prompter would have written, but the default failure mode is regression to the median — an email that sounds about anyone's project, not about this one. The corrective is in the prompt, not the prose. Read the draft aloud. If it does not sound like the prompter, the framing failed; iterate the prompt — see [[iterating-on-prompts]] — rather than wordsmith the output.
+The model can draft what the prompter would have written. By default it produces a median version: an email that could be about anyone's project. Read the draft aloud. If it does not sound like the prompter, the framing was wrong — iterate the prompt rather than the prose (see [[iterating-on-prompts]]).
 
 ```
 PROMPT
@@ -61,7 +61,7 @@ OUTPUT HANDLING
 
 ## Summarizing
 
-Summarizing is the cleanest fit for a language model — the source is in the prompt, the work is to reshape it, and there is nothing for the model to invent. The variable is what the summary is *for*. A 30-page report read by a busy reader with one decision to make wants the decision-relevant facts surfaced, not the report's table of contents replayed. Name the reader, name the decision, and the model can prioritize. Skip naming them, and the output recapitulates the document's own structure, which the reader could have skimmed without help.
+Summarizing is the cleanest fit for a language model: the source is in the prompt, the work is to reshape it, and there is nothing for the model to invent. The variable is what the summary is *for*. A reader who has one decision to make and a 30-page report does not need the document's structure recapped; they need the decision-relevant facts first. Name the reader, name the decision, and the model can prioritize. Without naming them, the output mirrors the document's headings — which the reader could have skimmed.
 
 ```
 PROMPT
@@ -75,14 +75,14 @@ CONTEXT PROVIDED
   - The reader: role, what they already know, what they don't.
 
 OUTPUT HANDLING
-  Check whether the decision-relevant facts surfaced, not whether
-  the document's headings did. If the summary mirrors the report's
-  structure, the prompt under-specified the reader.
+  Check whether the summary leads with the decision-relevant facts.
+  If it leads with the document's headings instead, the prompt
+  under-specified the reader.
 ```
 
 ## Planning
 
-Planning prompts produce the most generic outputs by default, because every project plan in the training data resembles every other one. The corrective is to overspecify: state the goal, the current state, the binding constraints, and the deadline. The hidden failure mode is unstated assumptions — the model fills them in silently and the plan looks reasonable until the first step encounters reality. The audit move is to ask the model what it assumed and revise from there.
+Planning prompts produce the most generic outputs by default, because every project plan in the training data resembles every other one. State the goal, the current state, the binding constraints, and the deadline. The hidden failure mode is unstated assumptions. When the prompter does not state them, the model fills them in. The plan reads as reasonable until execution exposes what was missed: a vendor's holiday calendar, a teammate on leave next month, an internal approval the prompter forgot to mention. Ask the model what it assumed, then revise the assumptions before re-running.
 
 ```
 PROMPT
@@ -104,6 +104,6 @@ OUTPUT HANDLING
   not the goal.
 ```
 
-When the same prompt-context-handling template runs every Monday — the manager email, the weekly plan, the standing summary — the worked example has graduated into a workflow. See [[when-workflows-graduate]].
+Some templates start running every Monday: the manager email, the weekly plan, the standing summary. At that point you have a workflow worth saving. See [[when-workflows-graduate]].
 
 *Related: [[which-tool-when]] · [[iterating-on-prompts]] · [[when-workflows-graduate]]*

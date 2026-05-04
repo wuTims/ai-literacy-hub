@@ -1,20 +1,20 @@
 ---
 title: What LLMs are
 created: 2026-04-30
-updated: 2026-05-01
+updated: 2026-05-03
 status: active
 tags: [foundations, mental-models]
 ---
 
 # What LLMs are
 
-When an LLM answers you, it is doing one thing: predicting the next token, then the next, then the next, given everything in front of it. That mechanism is the entire story. Every behavior the reader will encounter — fluency, hallucination, sensitivity to phrasing, the unsettling sense of "almost right" — is a consequence of it.
+When an LLM answers you, it is doing one thing: predicting the next token, then the next, then the next, given everything in front of it. Every other behavior of these models follows from that one fact. Fluent answers on topics barely covered by training data, the same question yielding different answers when re-asked, a small wording change that swings the response from useful to useless, a confident-sounding citation to a paper that does not exist — these all trace back to next-token prediction.
 
-The framing that holds up best in daily use is Simon Willison's: an LLM is a **calculator for words**. A tool for manipulating language. Not a tool for retrieving facts.
+The framing that holds up best in daily use is Simon Willison's: an LLM is a **calculator for words**. A tool for manipulating language, not for retrieving facts.
 
 ## How next-token prediction works
 
-Training compresses a vast pile of text into a model that, given any prefix, can score how likely each possible next token is. A token is a fragment of a word — sometimes a whole word, sometimes a few characters. There is no lookup, no database, no reasoning step underneath. There is a learned probability distribution over tokens, sampled one token at a time.
+Training compresses a vast pile of text into a model that, given any prefix, can score how likely each possible next token is. A token is a fragment of a word — sometimes a whole word, sometimes a few characters. There is no lookup, no database underneath. There is a learned probability distribution over tokens, sampled one token at a time.
 
 A single step looks like this:
 
@@ -40,23 +40,21 @@ prompt:    "The capital of France is"
                        ▼                (repeat until stop)
 ```
 
-The same prompt, run twice, will not always yield the same output. Sampling is stochastic, and most interfaces add a temperature setting that controls how aggressively the model deviates from its top choice. The model is, by construction, non-deterministic. Treat that as a property to engineer around, not a bug.
+The same prompt, run twice, will not always yield the same output. Ask *the capital of France is* and you will get *Paris* almost every time — that distribution is concentrated on one answer. Ask for an opening line to an email and you will get something different on each run — the distribution is wide, and the model is choosing between many continuations that all sound reasonable. This produces two practical actions: save a useful answer before regenerating it (the next run may not match), and when you want range, ask for many variants in one prompt rather than regenerating until something fits.
 
 ## What this implies
 
-Once the mechanism is on the table, the everyday behavior of these models stops being mysterious:
+With the mechanism in mind, the everyday behavior of these models stops being surprising:
 
 - **Eloquence is not evidence.** Fluency is what next-token prediction is best at. Coherent prose says nothing about whether the claims inside it are true.
 - **Confidence is not calibrated.** The model has no built-in signal for "the training data did not cover this." It produces plausible-sounding text either way.
 - **Recall is unreliable; manipulation is strong.** The model is much better at transforming text the prompter supplies than at retrieving text it might have seen during training. Paste the facts into the prompt; do not trust the model to remember them.
-- **Phrasing shifts the distribution.** Two prompts that mean the same thing to a human can produce different outputs, because they hit different regions of the probability landscape.
+- **Phrasing shifts the distribution.** Two prompts that mean the same thing to a human can produce different outputs, because the model treats them as different inputs.
 - **Style is inherited from training data.** Defaults toward an average register — vaguely corporate, vaguely confident — unless the prompt pulls it elsewhere.
-
-Each behavior follows from "next token, sampled, given context." None of them are surprises once that frame is in hand.
 
 ## Calculator for words
 
-The single most useful question to ask before reaching for an LLM: *is the task to manipulate language, or to retrieve a fact?* The first is the job it was built for. The second is the job that produces most disappointment.
+The single most useful question to ask before reaching for an LLM: *is the task to manipulate language, or to retrieve a fact?*
 
 | Fits the tool                                       | Fights the tool                                  |
 |-----------------------------------------------------|--------------------------------------------------|
@@ -67,14 +65,12 @@ The single most useful question to ask before reaching for an LLM: *is the task 
 | Draft three variants of this paragraph              | Look up this customer's account history          |
 | Convert this messy list into a structured table     | Recall the correct phone number for the office   |
 
-The pattern in the left column: the facts are *in the prompt*, and the model rearranges them. The pattern in the right column: the facts are supposed to come *from the model*, and the model has no reliable way to get them right.
-
-The calculator analogy has one acknowledged weakness, which Willison flags himself. A pocket calculator is deterministic; an LLM is not. Two identical prompts can yield different answers, and a prompt that worked yesterday may not work today after a model update. Build with tolerances. Verify outputs the way an engineer verifies a measurement, not the way a user trusts a search result.
+Willison notes one weakness in the calculator analogy. A pocket calculator is deterministic; an LLM is not. Two identical prompts can yield different answers, and a prompt that worked yesterday may not work today after a model update.
 
 ## What follows
 
-The three category errors that follow from "calculator for words" — not a search engine, not a database, not a reasoner — are spelled out next, on [[what-llms-arent]].
+Three category errors follow from "calculator for words": not a search engine, not a database, not a reasoner. They are spelled out next, on [[what-llms-arent]].
 
-A richer framing — the LLM as the kernel of an emerging operating system, coordinating tools, memory, and external systems — is useful, but it belongs downstream. For the foundation, the calculator-for-words frame does more work and makes fewer promises.
+A richer framing positions the LLM as the kernel of an emerging operating system that coordinates tools, memory, and external systems. That framing is useful but comes later. For the foundation, the calculator-for-words frame is enough.
 
 *Related: [[what-llms-arent]] · [[why-they-hallucinate]] · [[how-not-to-produce-ai-slop]]*

@@ -1,24 +1,24 @@
 ---
 title: Iterating on prompts
 created: 2026-04-30
-updated: 2026-05-01
+updated: 2026-05-03
 status: active
 tags: [prompting, iteration]
 ---
 
 # Iterating on prompts
 
-The first prompt is rarely the right prompt. That fact is structural, not a sign that something has gone wrong.
+The first prompt is rarely the right prompt.
 
-Editing the prompt is editing the prompter's own thinking. Iteration is part of drafting, the same way revising paragraph one is part of writing paragraph two — not an emergency response to a bad output.
+Editing the prompt is editing the prompter's own thinking. Changing *write a market scan* to *one-page brief for a product lead, two bullets per competitor* is the prompter making a decision the prompt would otherwise have left for the model. Iteration is part of drafting; a first prompt that needs a follow-up is the normal case.
 
 ## The first response is a probe
 
-The first output is not a verdict on the model. It is a snapshot of where the prompt left room for the model to invent. As [[prompt-as-thinking]] sets out, a vague prompt forces the model to fill in audience, format, and intent from training-data priors. The first response shows what was filled in.
+The first output shows what the prompt left for the model to fill in. A vague prompt forces the model to fill in audience, format, and intent from training-data priors (see [[prompt-as-thinking]]).
 
-Read the first output that way and its failures become diagnostic. A generic tone exposes an unnamed audience. A wrong-shaped artifact exposes an unnamed deliverable. A confident paragraph about a topic the prompter never described exposes that the prompt asked the model to invent the source material instead of handing it over.
+Read the first output that way and its failures become diagnostic. If the tone is generic, the prompter never named who the output is for. If the artifact is the wrong shape — bullets when the prompter wanted prose, three paragraphs when they wanted one — the deliverable was unnamed. A confident paragraph about a topic the prompter never described exposes that the prompt asked the model to invent the source material instead of handing it over.
 
-The point of the first response is not to keep it or discard it. It is to learn what was missing from the prompt.
+The first response is information about the prompt.
 
 ## A walkthrough
 
@@ -69,29 +69,25 @@ OUTPUT
   shape the prompter chose. Editable, defensible, signable.
 ```
 
-What changed across iterations was not "longer prompt." Each round made a different decision — name the audience, scope the deliverable, hand over the source. Length is a side effect of the decisions; the decisions are the work.
+What changed across iterations was the number of decisions the prompter made. v2 added the audience and shape; v3 added the source and an example bullet. The added length came from those decisions.
 
 ## Iteration moves
 
-The moves that produce iterations like the one above are discrete editorial actions. They are worth naming so they can be reached for deliberately, not stumbled into.
+The moves that produce iterations like the one above are discrete editorial actions. They are worth naming so they can be reached for deliberately.
 
-- **Name the audience explicitly.** The model has no default reader; it picks one for the prompter if the prompter does not.
+- **Name the audience explicitly.**
 - **Constrain length, format, or tone.** Replace adjectives like "concise" or "professional" with limits the model can satisfy or fail.
-- **Supply one example of the target shape.** A single example carries decisions a paragraph of adjectives cannot encode.
-- **Hand over the source material instead of asking the model to invent it.** Paraphrase-from-training-data is the failure mode this fixes.
-- **Ask for variants.** Five subject lines, three openings, ten alternative phrasings — then pick. Abundance beats attachment to the first draft.
-- **Ask for the inverse.** "What would a bad version of this look like?" surfaces what the prompter is implicitly ruling out.
-
-Each move is the prompter taking back a decision the model would otherwise have made by averaging.
+- **Supply one example of the target shape.**
+- **Hand over the source material instead of asking the model to invent it.**
+- **Ask for variants.** Ask for five subject lines, three openings, or ten alternative phrasings. Then pick.
+- **Ask for the inverse.** Asking *what would a bad version of this look like?* shows the prompter what they were implicitly excluding.
 
 ## Iterating the prompt vs editing the output
 
-Editing the output keeps the model's framing intact and changes the wording. Useful when the framing is right and the prose is not.
+Editing the output keeps the audience and shape the model assumed and changes the wording. Useful when the audience and shape are right and only the prose needs fixing.
 
-Iterating the prompt changes the framing. Useful when the output is wrong-shaped rather than wrong-worded — when the issue would recur in the next draft, not only this one.
+Iterating the prompt changes the audience, shape, or source the model is working from. Useful when the issue would recur if the prompt ran a second time.
 
-The diagnostic is: would this problem appear again if the prompt ran a second time? If yes, re-prompt. If no, edit. Sometimes a re-prompt reaches in one round what three rounds of in-place edits cannot. Knowing when to throw away the draft rather than nurse it along is itself part of the skill, and the [[the-intern-frame]] coworker behavior — re-prompting without apology — is what makes that move cheap to take.
-
-The first prompt is a hypothesis. The output is the test. The next prompt is what the prompter learned, written down.
+The diagnostic is: would this problem appear again if the prompt ran a second time? If yes, re-prompt. If no, edit. Sometimes a re-prompt reaches in one round what three rounds of in-place edits cannot. Re-prompting only feels expensive when the first draft gets treated as final. The coworker frame in [[the-intern-frame]] removes that hesitation.
 
 *Related: [[prompt-as-thinking]] · [[the-intern-frame]] · [[reading-the-output]]*

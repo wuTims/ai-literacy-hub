@@ -1,20 +1,20 @@
 ---
 title: What they're good and bad at
 created: 2026-04-30
-updated: 2026-05-01
+updated: 2026-05-03
 status: active
 tags: [foundations, capabilities]
 ---
 
 # What they're good and bad at
 
-Capability is uneven across tasks that look identical from the outside. The unevenness has a stable shape underneath and a moving surface on top.
+Capability is uneven across tasks that look identical from the outside. The categories of strength and weakness are stable; the specific tasks inside each category shift release to release.
 
 ## The frontier is jagged
 
-Ethan Mollick's term for it is the **jagged frontier**. Two prompts that read like the same task to a human can produce wildly different success rates from the model. A request to summarize a fifty-page document the prompter pastes in is near-solved. A request to summarize "all our exchanges with this customer last quarter" is a category error in the same sentence shape — the second version asks the model to *retrieve* before it manipulates, and retrieval is the half it does badly.
+Ethan Mollick's term for it is the **jagged frontier**. Two prompts that read like the same task to a human can produce wildly different success rates from the model. A request to summarize a fifty-page document the prompter pastes in is near-solved. A request to summarize "all our exchanges with this customer last quarter" looks like the same task but asks the model to fetch information first, which it does poorly.
 
-The frontier does not sort by what humans find difficult. Adding a long column of dollar amounts pasted from a statement is a task a reader can verify line by line and many models will get wrong by one entry. Rewriting a paragraph in a specified voice is a task most readers find hard and most models do well. Training shaped what's easy, not intuition.
+The frontier does not sort by what humans find difficult. Adding a long column of dollar amounts pasted from a statement is a task a reader can verify line by line and many models will get wrong by one entry. Rewriting a paragraph in a specified voice is a task most readers find hard and most models do well. What's easy for the model has no relation to what's easy for a human.
 
 ## A snapshot, paired by domain
 
@@ -30,15 +30,15 @@ Each row pairs two requests in the same domain — one inside the model's streng
 | Drafting | Turn five bullets you wrote into a tight 200-word paragraph | Write a strategy memo from a one-line brief                   |
 | Lists    | Rephrase forty items in parallel grammatical structure  | Count the unique items in a forty-item list and return the number |
 
-The left column gives the model the material; the right column asks the model to supply it. The split inside each row is the jagged frontier in miniature.
+The left column gives the model the material; the right column asks the model to supply it.
 
-> This list will age. Treat it as a snapshot dated to the frontmatter. Re-test before relying on any single row.
+> Test these pairs on your current model before relying on any row.
 
 ## What does not age
 
 The rows move. The categories underneath move much more slowly:
 
-**Reliable strengths:** manipulate, extract, restructure, or generate variants from material in front of the model. The substrate works on what's in the prompt.
+**Reliable strengths:** manipulate, extract, restructure, or generate variants from material in front of the model.
 
 **Reliable weaknesses:**
 
@@ -47,14 +47,10 @@ The rows move. The categories underneath move much more slowly:
 - Multi-step deduction without external tools — long arithmetic, schedule conflicts, dependency chains.
 - Self-assessment — asking "are you sure?" samples more text from the same machine. See [[why-they-hallucinate]].
 
-A capability that sits in the strength column today rarely moves to the weakness column tomorrow. A capability in the weakness column may improve in any given release, but the *shape* of the weakness — answer-from-the-world, exhaustive count, deduction without scratch space — has held across model generations.
+A capability in the strength column today rarely moves to the weakness column tomorrow. A capability in the weakness column may improve in any given release, but the categories themselves have held across model generations: answer-from-the-world, exhaustive count, deduction without scratch space.
 
 ## Why the unevenness will not smooth out on a schedule
 
-Capability does not increase along a single axis the reader can chart. A new release closes some gaps and opens others. A model that handles a forty-item count this month may regress on it next month after a tuning pass aimed at something else. Re-test the tasks that matter to you whenever the model under you changes. Trust the categories; verify the rows.
-
-## Calibration, not memorization
-
-The point of the table is not to remember which row goes where. It's to internalize that any new task lands somewhere on a frontier that does not align with human difficulty, and that the only honest way to find out is to try the task and check the output. Hold the categories. Re-test the rows. The good-at column is wider than most readers expect. The bad-at column is sharper-edged than most readers fear.
+Capability does not increase along a single axis the reader can chart. A new release closes some gaps and opens others. A model that handles a forty-item count this month may regress on it next month after a tuning pass aimed at something else. Re-test the tasks that matter to you whenever you switch to a new model.
 
 *Related: [[what-llms-arent]] · [[why-they-hallucinate]] · [[how-not-to-produce-ai-slop]]*
