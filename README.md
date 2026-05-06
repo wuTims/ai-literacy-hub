@@ -12,6 +12,17 @@ What separates a useful AI-generated artifact from slop is rarely the model. It'
 
 The thesis is slop-aversion. Every page is downstream of one claim: an AI-generated artifact is only useful if the person who produced it engaged with it. Mental models, prompting, context, and tool choice all serve that habit. None of them substitute for it.
 
+## Get the hub on your machine
+
+The hub is designed to be read as an Obsidian vault — wikilinks resolve, the graph view works, and pages cross-navigate the way they're meant to.
+
+1. Download the latest `.zip` from [Releases](https://github.com/wuTims/ai-literacy-hub/releases).
+2. Unzip the folder anywhere on your machine.
+3. Open Obsidian → **Open folder as vault** → select the unzipped folder.
+4. Start with `start-here.md`.
+
+Never used Obsidian, or want a fuller walkthrough? See [ONBOARDING.md](ONBOARDING.md).
+
 ## Audience
 
 The reader has basic computer literacy and has used ChatGPT, Claude, or a comparable chatbot at least a few times. The reader does not write code, does not want to write code, and is not assumed to know any AI-specific vocabulary beyond the chatbot interface.

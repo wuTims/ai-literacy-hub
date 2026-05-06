@@ -1,0 +1,36 @@
+name: Release vault
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build vault zip
+        run: |
+          OUT="ai-literacy-hub-${GITHUB_REF_NAME}.zip"
+          zip -r "$OUT" \
+            1-what-llms-are-and-arent \
+            2-how-to-talk-to-them \
+            3-context-engineering \
+            4-building-workflows \
+            assets \
+            start-here.md \
+            curated-links.md \
+            how-not-to-produce-ai-slop.md \
+            README.md \
+            ONBOARDING.md
+          echo "ZIP=$OUT" >> "$GITHUB_ENV"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ZIP }}
+          generate_release_notes: true
