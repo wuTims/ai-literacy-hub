@@ -43,7 +43,9 @@ This spec addresses both.
 - Changing what the hub teaches. The slop-aversion thesis, the four-section structure, the page list, the citation rules, and the visual conventions all stay.
 - Changing filenames or wikilinks. No file moves, no renames.
 
-## Voice directive (replaces `spec-ai-literacy-hub.md` lines 43–53)
+## Voice directive
+
+The text in this section is the content that will replace `spec-ai-literacy-hub.md` lines 43–53 at step 7 of the rewrite plan. Until step 7 lands, this spec is the source of truth for the voice rules.
 
 ### Register: friendly textbook
 
@@ -131,7 +133,7 @@ Every page is being touched anyway. The previous/up/next footer goes in during t
 | A | 1 (slop exemplar) | Critical. If the new voice does not land here, every later rewrite is wasted. User reads and approves before any other page is rewritten. |
 | B | 2 (Section 1) | User reads all four. If the voice held up across a section, the pattern is locked in. |
 | C | 3 (Section 2) | Spot-check, confidence-building. |
-| D | 5 + 6 + 7 (Sections 3, 4, meta, spec) | Final review of the whole hub before navigation work wraps. |
+| D | 4 + 5 + 6 + 7 (Sections 3 and 4, meta pages, spec update) | Final review of the whole hub before navigation work wraps. Section 3 and Section 4 are batched into the final review since the voice has already been validated three times by then. |
 
 ## Navigation design
 
