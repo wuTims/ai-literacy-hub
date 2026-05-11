@@ -3,7 +3,7 @@ node_id: "spec-ai-literacy-hub"
 type: design
 title: "Spec: AI Literacy Hub"
 created: 2026-04-30
-updated: 2026-04-30
+updated: 2026-05-10
 status: draft
 category: design
 tags: [literacy-hub, content, spec]
@@ -30,9 +30,9 @@ Non-engineering people working alongside AI tools daily — designers, PMs, ops,
 ## Non-goals
 
 - Teaching non-engineers to code or build agents.
-- Comprehensive coverage of every model, tool, and technique. The hub is opinionated and curates aggressively.
+- Comprehensive coverage of every model, tool, and technique. The hub is opinionated and curates carefully.
 - Public-facing content marketing. The hub is private-by-default; eventual publication is a separate decision.
-- Replacing Anthropic / OpenAI / Karpathy / Mollick / Willison primary sources. The hub synthesizes and links; it does not try to be the canonical reference.
+- Replacing Anthropic / OpenAI / Karpathy / Mollick / Willison primary sources. The hub pulls these together and links out; it does not try to be the canonical reference.
 
 ## Audience
 
@@ -40,31 +40,59 @@ Non-engineering people working alongside AI tools daily — designers, PMs, ops,
 
 ## Authoring constraints
 
-### Voice
+### Tone: friendly textbook
 
-The voice is **standards-definition register with curiosity** — closer to a style guide or principles doc than a personal blog. Specific rules:
+The reader is an adult who has used ChatGPT a few times but does not work in tech. Write the way you would explain something to a smart friend who asked a sincere question. Full sentences, not telegrams. Use a familiar analogy when one genuinely clarifies the idea; do not force one when plain words are enough.
 
-- Default to second-person ("the reader", "you") and third-person ("the prompter", "the artifact"). Use first-person sparingly and only where personal experience is the substance.
-- Frame openings with rhetorical questions or direct claims, not thesis statements. No "In this section, I'll explain..."
+### The 14-year-old test
+
+Read each paragraph aloud and ask: would a curious 14-year-old follow this without stopping to look up a word? If no, rewrite it. Use technical terms when they are the right name for the thing — but introduce each one in the sentence that uses it.
+
+### Banlist
+
+The following words and phrases were found in the current pages and are banned outright. The right column gives plain-language replacements; the page may need a sentence-level rewrite, not just a word swap.
+
+| Banned | Use instead |
+|---|---|
+| load-bearing | "the most important", "the one this builds on" |
+| calibrate / calibrates / calibrated against | "compare against", "judge against" |
+| aggressively (cross-link / curate) | "often", "a lot", "carefully" |
+| downstream of | "follows from", "builds on", "depends on" |
+| off-ramp | "the way out", "when to stop and switch" |
+| the corrective | "the fix", "what to do instead" |
+| category error | "mistake", "wrong tool for the job" |
+| audit posture | "the way you read your own work" |
+| the spine of (the hub) | "the main page", "the page everything else builds on" |
+| instantiated (X ways) | "shown as", "four examples of" |
+| synthesize / synthesis | "combine", "pull together" |
+| lossy patterns | "fuzzy patterns", "rough shapes" |
+| register (as a noun, meaning tone) | "tone", "style" |
+| compounds (the cost compounds) | "adds up", "gets worse over time" |
+| the giveaway | "the sign", "how you can tell" |
+| pre-empt | "head off", "avoid in advance" |
+| roam (the graph is self-directed; readers roam) | "explore", "follow whatever interests you" |
+
+The existing bans on *essentially*, *basically*, *robust*, and *seamless* stay.
+
+### Introduce, don't assume
+
+When a page uses a word the audience may not know — *token, prompt, agent, context window* — define it on first use in plain language, even if another page also defines it. Pages are read out of order. A first-use definition costs a sentence and saves the reader from bouncing between pages.
+
+### What stays from the current voice
+
+- Default to second-person ("you", "the reader") and third-person ("the prompter", "the artifact"). First-person sparingly, only where personal experience is the substance.
+- Frame openings with rhetorical questions or direct claims, not thesis statements. No *"In this section, I'll explain…"*.
 - Express uncertainty through scoped claims ("for non-engineers", "in most cases"), not hedges ("I think", "it might be").
-- Honest about limitations. State what the hub doesn't cover.
-- No filler ("essentially", "basically"), no vague praise ("robust", "seamless"), no marketing voice.
-
-Calibrate against the **golden example**: `how-not-to-produce-ai-slop.md` (this PR). If a draft page's voice diverges from that page's register, the draft is wrong, not the example.
+- Honest about limitations. State what the hub does not cover.
+- No condescension. The audience is non-technical, not unintelligent. *Simply, just, all you have to do* are still out.
+- No fearmongering. The MIT cognition study cap (2 across the hub) stays.
+- No tool tribalism. Same as today.
 
 ### Density
 
-Pages target **600–900 words** with substantial visual structure. A page over 1000 words is suspect — either the topic should split, or prose is doing work that visuals could do better.
-
-Required: every page leans on at least two of the following per ~600 words:
-
-- A table (comparison, before/after, decision matrix).
-- A code-block-style structural element (process flow, prompt template, mental-model diagram in monospace).
-- A bulleted list with concrete items (not abstract restatements).
-- An Excalidraw diagram (for mental models, conceptual flows, "what to reach for when").
-- A blockquote highlighting a single load-bearing claim or test.
-
-Prose carries the argument; visuals carry the structure.
+- **Word target per page: 800–1500 words.** The friendly-textbook tone needs more sentences, not fewer.
+- **Visual rhythm rules stay.** Every page leans on at least two of the following per ~600 words: a table, a code-block-style structural element, a bulleted list with concrete items, an Excalidraw diagram, or a blockquote highlighting a single important claim or test. Prose carries the argument; visuals carry the structure.
+- **A page over 1800 words is suspect.** Either the topic should split, or the prose is doing work a visual could do better.
 
 ### Structure per page
 
@@ -85,8 +113,8 @@ Same set as the engineering writing-style guide, with one addition specific to l
 ### Citations
 
 - MIT cognition study (*Your Brain on ChatGPT*, 2025): hard cap of 2 across the hub. Anti-fearmongering rule. Tracker: `_meta/citation-tracker.md`.
-- Other empirical or argumentative sources (Karpathy, Willison, Mollick, Mitchell, Anthropic, OpenAI, et al.): no cap. Cite when the source carries the argument; synthesize and reframe in hub voice (authoring rule 2).
-- Attribution standard: load-bearing claims that originate with a named source get the source named on first use within a section. Subsequent reuse in the same section can rely on the earlier attribution.
+- Other empirical or argumentative sources (Karpathy, Willison, Mollick, Mitchell, Anthropic, OpenAI, et al.): no cap. Cite when the source carries the argument; combine and reframe in hub voice (authoring rule 2).
+- Attribution standard: important claims that originate with a named source get the source named on first use within a section. Subsequent reuse in the same section can rely on the earlier attribution.
 - No drive-by citations. If a citation does not change what the reader should believe or do, drop it.
 
 ## Hub structure
@@ -141,7 +169,7 @@ Where the hub stops being curriculum and becomes opinionated tooling guidance.
 
 | Page | Purpose |
 |---|---|
-| `how-not-to-produce-ai-slop.md` | **Golden example.** The spine of the hub. Linked from most other pages. |
+| `how-not-to-produce-ai-slop.md` | **Golden example.** The main page everything else builds on. Linked from most other pages. |
 | `start-here.md` | Recommended reading order for readers who want hand-holding. Otherwise the graph is self-directed. |
 | `curated-links.md` | High-value external sources, each with a one-sentence "why this is worth your time." |
 
@@ -167,7 +195,7 @@ Each link gets a one-sentence note in `curated-links.md` explaining why it earns
 
 - **Tables** for comparisons, before/after, decision matrices. Default for any "X vs Y" content.
 - **Code blocks** (monospace) for prompt templates, process flows, and structured mental models — even when not actual code. The visual cue says "this is structural, not narrative."
-- **Blockquotes** for single load-bearing claims or tests that should slow the reader down.
+- **Blockquotes** for a single important claim or test that should slow the reader down.
 - **Excalidraw diagrams** for conceptual mental models. Live in the vault under `assets/excalidraw/`. Embed via Obsidian-native syntax. Targets:
   - Section 1: "context window" diagram, "what the model sees vs. what you see" diagram.
   - Section 3: chat-vs-project state model, context-management flow.
@@ -214,14 +242,14 @@ ai-literacy-hub/
 
 The executing agent must:
 
-1. **Read the golden example first** (`how-not-to-produce-ai-slop.md`) and match its register, density, and visual rhythm.
-2. **Read all five curated industry sources** before drafting any Section 1 or 2 page. Synthesize, do not paraphrase. Reframe in hub voice.
+1. **Read the golden example first** (`how-not-to-produce-ai-slop.md`) and match its tone, density, and visual rhythm.
+2. **Read all five curated industry sources** before drafting any Section 1 or 2 page. Combine and pull together, do not paraphrase. Reframe in hub voice.
 3. **Draft one page at a time.** No batch generation. Each page is reviewed by the human before the next is started.
 4. **Use the writing-style-guide skill** for sentence-level rules. Bend the first-person default per the voice rules above.
 5. **Cite the MIT cognition study at most twice across the hub.** Track citations in a running note.
 6. **No section may exceed 4 paragraphs of continuous prose** without a visual break (table, list, blockquote, code block, diagram).
 7. **`when-workflows-graduate.md` is one paragraph plus one external link** to the engineering harness. Do not expand.
-8. **Cross-link aggressively within sections, sparingly across sections.** Use Obsidian wikilinks. Run a link-resolution check before declaring a page done.
+8. **Cross-link often within sections, sparingly across sections.** Use Obsidian wikilinks. Run a link-resolution check before declaring a page done.
 
 ## Out of scope for v1
 
