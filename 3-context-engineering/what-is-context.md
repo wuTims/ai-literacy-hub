@@ -37,7 +37,7 @@ OUTSIDE THE WINDOW (the model has no access)
   • anything in the training data that wasn't pulled into the prefix
 ```
 
-The window is finite. When a conversation grows past the cap, the oldest content falls out of the window and the model can no longer use it. The model is not choosing to forget; the text is simply no longer in front of it.
+The window is finite. When a conversation grows past the cap, the oldest content falls out of the window and the model can no longer use it. The model is not choosing to forget; the text is no longer in front of it.
 
 ![[model-sees-vs-you-see.png]]
 

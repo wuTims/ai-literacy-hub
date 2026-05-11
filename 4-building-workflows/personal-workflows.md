@@ -94,7 +94,7 @@ Planning prompts produce the most generic output of the four by default. Every p
 
 The interesting failure is not the genericness; it is the *unstated assumptions*. When you do not tell the model what is true about your situation, it makes things up to fill the gap. The vendor's SDK arrives on time. Your designer is not on leave next month. Legal review takes a week. The plan reads as reasonable right up until the moment one of those silent guesses turns out to be wrong, and then the whole thing wobbles.
 
-The trick: ask the model to *list its assumptions at the end of the plan*. Read that list before you read the plan. Cross out the assumptions that do not match reality, then re-run the prompt. The plan you actually want is downstream from the right assumptions, not from the goal.
+The trick: ask the model to *list its assumptions at the end of the plan*. Read that list before you read the plan. Cross out the assumptions that do not match reality, then re-run the prompt. The plan you actually want follows from the right assumptions, not from the goal.
 
 ```
 PROMPT
@@ -118,7 +118,7 @@ OUTPUT HANDLING
 
 ## When a template starts running every Monday
 
-Notice what the four examples have in common. Each prompt is reusable: swap the question, the email subject, the report, the goal — the scaffolding holds. That is the moment to pay attention to. Once you find yourself typing roughly the same prompt every Monday — the manager email, the weekly plan, the standing summary — you no longer have a chat task. You have a workflow worth saving as a custom GPT, a Claude Project, a scheduled run, or a small script. See [[when-workflows-graduate]] for what that looks like.
+Notice what the four examples have in common. Each prompt is reusable: swap the question, the email subject, the report, the goal — the scaffolding holds. Once you find yourself typing roughly the same prompt every Monday — the manager email, the weekly plan, the standing summary — you no longer have a chat task. You have a workflow worth saving as a custom GPT, a Claude Project, a scheduled run, or a small script. See [[when-workflows-graduate]] for the handoff to engineering reading once you reach that point.
 
 ---
 

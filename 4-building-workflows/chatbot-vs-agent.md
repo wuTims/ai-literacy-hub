@@ -14,9 +14,9 @@ There is one question that tells you whether a piece of AI software is a chatbot
 
 A chatbot waits. You type, it replies, it waits again. Nothing happens in the gap between your messages — the program is just sitting there until you say something next. An agent is different. After you tell it what you want, it goes off and *does things on its own*: opens files, runs programs, sends requests over the internet, looks at what came back, decides what to do next. By the time it talks to you again, the world has changed a little. That is the line.
 
-Hold onto that test. Half the confusion around this topic comes from companies stamping the word "agent" on whatever they are shipping this quarter, and the test lets you ignore the marketing and look at the actual behavior.
+Half the confusion around this topic comes from companies stamping the word "agent" on whatever they are shipping this quarter. The test above lets you ignore the marketing and look at the actual behavior.
 
-## A cleaner definition
+## Hashimoto's definition: chat plus actions in a loop
 
 Mitchell Hashimoto, who builds developer tools for a living, wrote down the version of this that engineers find most useful: an agent is an LLM that can chat *and invoke external behavior in a loop*. The minimum capabilities are reading files, running programs, and making HTTP requests. Anything missing those three is a chatbot dressed up in agent vocabulary.
 
@@ -38,7 +38,7 @@ Anthropic, the company that makes Claude, splits the agent category into two fin
 
 ## What's already in your tools
 
-Here is the thing that surprises people: the agentic features are already inside the chat tools you use every day. Most of them go unused because nobody clicked past the chat box. ([[which-tool-when]] handles the cross-tool comparison.)
+The agentic features are already inside the chat tools you use every day. Most of them go unused because nobody clicked past the chat box. ([[which-tool-when]] handles the cross-tool comparison.)
 
 - **ChatGPT.** Tasks and scheduled runs; tool calls inside conversations.
 - **Claude.** Tool use via Projects and Connectors; computer use via API and the desktop app; Routines for cloud-hosted scheduled runs.
@@ -62,7 +62,7 @@ These features start mattering the moment your work touches multiple apps, branc
 
 Single-window tasks — writing a paragraph, summarizing something you pasted in, thinking through a decision — work in chat. Tasks that spread across files, tools, or weeks need an agent, because without one *you* are the agent: you become the thing copying data from the calendar to the email to the doc to the spreadsheet.
 
-That is worth saying directly. If you spend more time moving data between windows than thinking about the task, you have demoted yourself into the role the model should be playing.
+If you spend more time moving data between windows than thinking about the task, you have demoted yourself into the role the model should be playing.
 
 ## Friction signals
 
@@ -74,7 +74,7 @@ You can usually feel a chat tool running out of room before you can explain why.
 - **Data is being moved between tools.** Calendar to email to doc to spreadsheet. Each hop is a step you are doing on the model's behalf.
 - **The same three-step prompt, on repeat.** A sequence you have memorized is begging to be saved — as a custom GPT, a Claude Project, a scheduled task, or a small script.
 
-When most of these fire at once, the task has outgrown the chat window. See [[when-workflows-graduate]] for what to build next.
+When most of these fire at once, the task has outgrown the chat window. The next page, [[personal-workflows]], runs four worked examples while the work still fits in chat; [[when-workflows-graduate]] handles what comes after that.
 
 ---
 

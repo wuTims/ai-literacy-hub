@@ -62,4 +62,4 @@ In practice, most real prompting moves between the two. You start in intern mode
 
 ← Previous: [[prompt-as-thinking]] · Up: [[start-here]] · Next: [[iterating-on-prompts]] →
 
-*Related: [[prompt-as-thinking]] · [[reading-the-output]] · [[how-not-to-produce-ai-slop]]*
+*Related: [[prompt-as-thinking]] · [[iterating-on-prompts]] · [[how-not-to-produce-ai-slop]]*

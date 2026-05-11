@@ -102,4 +102,4 @@ Re-prompting only feels expensive when you treat the first draft as final. It is
 
 ← Previous: [[the-intern-frame]] · Up: [[start-here]] · Next: [[reading-the-output]] →
 
-*Related: [[prompt-as-thinking]] · [[the-intern-frame]] · [[how-not-to-produce-ai-slop]]*
+*Related: [[prompt-as-thinking]] · [[the-intern-frame]] · [[reading-the-output]]*
