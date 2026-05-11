@@ -209,7 +209,7 @@ No Canva. Excalidraw matches the Obsidian-native flow and stays editable in sour
 ai-literacy-hub/
 ├── README.md                              # What this is, who it's for, slop-aversion thesis
 ├── start-here.md                          # Recommended reading order
-├── how-not-to-produce-ai-slop.md          # Golden example, spine of hub
+├── how-not-to-produce-ai-slop.md          # Golden example, the page everything else builds on
 ├── curated-links.md
 ├── _drafts/                               # gitignored
 ├── assets/
