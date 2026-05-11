@@ -1,23 +1,31 @@
 ---
 title: Chatbot vs. agent
 created: 2026-04-30
-updated: 2026-05-03
+updated: 2026-05-10
 status: active
 tags: [workflows, agents, mental-models]
 ---
 
 # Chatbot vs. agent
 
-A chatbot only acts when you send a prompt; an agent can act between your prompts. That mechanical difference is what separates the two.
+There is one question that tells you whether a piece of AI software is a chatbot or an agent, and it has nothing to do with what the company on the website calls it.
 
-## What counts as an agent
+> **Does the model act between your turns?**
 
-Mitchell Hashimoto's working definition is the cleanest one available: an agent is an LLM that can chat *and invoke external behavior in a loop*. The minimum capabilities are reading files, running programs, and making HTTP requests. An inbox-triage system that reads each thread, drafts replies, and sends them is an agent: the user describes the goal, the system does the rest. Tools that lack those three capabilities are chatbots, even when the vendor markets them as "agents."
+A chatbot waits. You type, it replies, it waits again. Nothing happens in the gap between your messages — the program is just sitting there until you say something next. An agent is different. After you tell it what you want, it goes off and *does things on its own*: opens files, runs programs, sends requests over the internet, looks at what came back, decides what to do next. By the time it talks to you again, the world has changed a little. That is the line.
 
-For non-engineers, the same distinction in plainer terms:
+Half the confusion around this topic comes from companies stamping the word "agent" on whatever they are shipping this quarter. The test above lets you ignore the marketing and look at the actual behavior.
 
-- **Chatbot.** Turn-by-turn. The user initiates every step.
-- **Agent.** Reads, fetches, opens, sends, and edits between prompts rather than during them.
+## Hashimoto's definition: chat plus actions in a loop
+
+Mitchell Hashimoto, who builds developer tools for a living, wrote down the version of this that engineers find most useful: an agent is an LLM that can chat *and invoke external behavior in a loop*. The minimum capabilities are reading files, running programs, and making HTTP requests. Anything missing those three is a chatbot dressed up in agent vocabulary.
+
+Take inbox triage. A system that reads each thread in your inbox, drafts a reply, and sends the reply once it looks reasonable is an agent: you described the goal once, and the program is doing the work — read, decide, write, send — on its own. Compare that to a chatbot you ask "summarize my unread mail." The chatbot can't open your inbox. It can only answer with whatever you paste into the box.
+
+For non-engineers, the same distinction in plain terms:
+
+- **Chatbot.** Turn-by-turn. You initiate every step.
+- **Agent.** Reads, fetches, opens, sends, and edits *between* your prompts rather than only *during* them.
 
 ```
 AGENT
@@ -26,18 +34,18 @@ AGENT
                           └────── loops as needed ───────┘
 ```
 
-Anthropic distinguishes two cases inside the agent category: a workflow executes predefined steps the model fills in, while an agent picks the steps itself. That distinction matters when you build one. When you choose between tools, treat anything that runs steps between your turns as an agent.
+Anthropic, the company that makes Claude, splits the agent category into two finer ideas. A *workflow* runs through a list of steps that someone wrote out in advance — the model just fills in the blanks at each step. A true *agent* picks the steps itself based on what it finds along the way. That difference matters when you build one of these systems, because picking your own steps is much harder to debug than filling in someone else's. For everyday tool selection, you can lump them together: anything that does work between your turns is on the agent side of the line.
 
 ## What's already in your tools
 
-Agentic features are already inside the chat tools you use. The question for the reader is which tasks they fit. ([[which-tool-when]] handles the cross-tool comparison.)
+The agentic features are already inside the chat tools you use every day. Most of them go unused because nobody clicked past the chat box. ([[which-tool-when]] handles the cross-tool comparison.)
 
 - **ChatGPT.** Tasks and scheduled runs; tool calls inside conversations.
 - **Claude.** Tool use via Projects and Connectors; computer use via API and the desktop app; Routines for cloud-hosted scheduled runs.
 - **Gemini in Workspace.** Drafting, scheduling, and sending across Gmail, Calendar, and Drive; Workspace Intelligence reads across the suite (Apr 2026); Scheduled Actions for recurring prompts.
 - **Microsoft 365 Copilot.** Agent Mode in Word, Excel, and PowerPoint (GA Apr 2026); named Word/Excel/PowerPoint Agents in Copilot chat; in-app actions across Outlook and Teams.
 
-Most readers have only typed into the chat box. The features above are available in those products but go unused on most tasks. They start mattering when work touches multiple apps, branches on intermediate results, or repeats often enough to be worth saving.
+These features start mattering the moment your work touches multiple apps, branches based on what it finds, or repeats often enough to be worth saving.
 
 ## Which to reach for
 
@@ -47,23 +55,29 @@ Most readers have only typed into the chat box. The features above are available
 | Summarizing one document you paste in               | Yes                        | Overkill                   | One turn does it; nothing external to call.                          |
 | Triaging an inbox of 80 unread threads              | Workable, slow             | Strong fit                 | Branches per message; reading and drafting become tools.             |
 | Pulling numbers from a folder of PDFs into a sheet  | Tedious                    | Strong fit                 | Multi-tool: read each file, write the sheet, verify totals.          |
-| Scheduling across calendars and an email thread     | Weak                       | Strong fit                 | Calendar → email → doc; the user spends more time pasting than asking. |
+| Scheduling across calendars and an email thread     | Weak                       | Strong fit                 | Calendar to email to doc; you spend more time pasting than asking.   |
 | Talking through a hard decision                     | Strong                     | Skip                       | The thinking *is* the deliverable; action does not help.             |
 | Recurring weekly summary across tools               | Weak                       | Strong fit                 | Recurring + multi-tool; the same prompt every week is a workflow.    |
-| Researching a topic with web sources                | Fits for narrow scope      | Fits for broad scope       | Agents compress retrieval; chat works if scope stays small.          |
+| Researching a topic with web sources                | Fits for narrow scope      | Fits for broad scope       | Agents shrink retrieval; chat works if scope stays small.            |
 
-Single-window tasks (drafting, summarizing pasted material, thinking through a decision) work in chat. Tasks that spread across files, tools, or weeks need an agent: in a chat tool, the user has to copy data between steps manually.
+Single-window tasks — writing a paragraph, summarizing something you pasted in, thinking through a decision — work in chat. Tasks that spread across files, tools, or weeks need an agent, because without one *you* are the agent: you become the thing copying data from the calendar to the email to the doc to the spreadsheet.
+
+If you spend more time moving data between windows than thinking about the task, you have demoted yourself into the role the model should be playing.
 
 ## Friction signals
 
-When three or more of these fire together, prompt iteration stops paying.
+You can usually feel a chat tool running out of room before you can explain why. Watch for these five signs. When three or more fire on the same task, prompt iteration has stopped paying.
 
-- **The same prompt every Monday.** A recurring task is a workflow. Rebuilding the context each week is wasted motion.
-- **The output never leaves the document.** If the artifact lives in a Doc, a sheet, or an inbox thread, the in-document agent beats round-tripping a chat tab.
-- **The task branches on its own results.** When the work reads "do X, then based on what X says do Y or Z," every branch becomes another round-trip the user runs by hand.
-- **Data is being moved between tools.** Calendar to email to doc to spreadsheet. Each copy-paste is a step the user is performing for the model.
-- **The same three-step prompt, on repeat.** A sequence the prompter has memorized is asking to be saved — as a custom GPT, a Project, a scheduled task, a script.
+- **The same prompt every Monday.** A recurring task is a workflow in disguise. Rebuilding the context from scratch every week is motion you don't need to be doing.
+- **The output never leaves the document.** If the final piece of writing is going to live in a Google Doc, a Word file, or an email thread, the in-document agent beats round-tripping a separate chat tab.
+- **The task branches on its own results.** When the work reads "do X, then based on what X says, do either Y or Z" — every branch becomes another copy-paste trip that you are personally running.
+- **Data is being moved between tools.** Calendar to email to doc to spreadsheet. Each hop is a step you are doing on the model's behalf.
+- **The same three-step prompt, on repeat.** A sequence you have memorized is begging to be saved — as a custom GPT, a Claude Project, a scheduled task, or a small script.
 
-If most of these fire at once, the task needs more structure than a chat window provides. See [[when-workflows-graduate]] for what to build next.
+When most of these fire at once, the task has outgrown the chat window. The next page, [[personal-workflows]], runs four worked examples while the work still fits in chat; [[when-workflows-graduate]] handles what comes after that.
+
+---
+
+← Previous: [[which-tool-when]] · Up: [[start-here]] · Next: [[personal-workflows]] →
 
 *Related: [[which-tool-when]] · [[personal-workflows]] · [[when-workflows-graduate]]*

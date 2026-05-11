@@ -1,16 +1,16 @@
 ---
 title: Start here
 created: 2026-04-30
-updated: 2026-05-01
+updated: 2026-05-10
 status: active
 tags: [meta, navigation]
 ---
 
 # Start here
 
-The hub is a graph, not a course. Every page cross-links to its neighbors and the reader is expected to roam. This page exists for one trip through — a recommended order for the first reading, after which the graph is self-directed. The annotations on each entry justify the *order*, not the content; the page itself does the rest.
+The hub is a graph, not a course. Every page links to its neighbors, and you're meant to wander. This page exists for one trip through — a recommended order for the first reading, after which you can follow the graph wherever it leads. The note on each entry explains why the page sits in *that slot* in the order; the page itself does the rest.
 
-## If the budget is shorter than the path
+## If you have less time than the path needs
 
 | Budget        | Read at minimum                                                                  |
 |---------------|----------------------------------------------------------------------------------|
@@ -18,28 +18,28 @@ The hub is a graph, not a course. Every page cross-links to its neighbors and th
 | An hour       | Entries 1 through 5 — the thesis plus all four section foundations.              |
 | A weekend     | The full path below, with time to try the moves on actual work in between.       |
 
-The 20-minute and one-hour rows still pass through the load-bearing pages. The weekend row is where iteration on the reader's own work earns its slot.
+The 20-minute and one-hour rows still cover the pages everything else builds on. The weekend row is where trying the moves on your own work earns its slot.
 
 ## The path
 
-1. [[how-not-to-produce-ai-slop]] — _the slop-aversion thesis; every other page is downstream of it._
-2. [[what-llms-are]] — _the foundational mental model; nothing about prompting, context, or tool choice lands without it._
-3. [[what-llms-arent]] — _the negative cases that calibrate the prior frame and pre-empt three predictable category errors._
-4. [[why-they-hallucinate]] — _why fabrication is structural, not a bug to patch; sets the verification habit before it is needed._
-5. [[what-theyre-good-and-bad-at]] — _the snapshot of capability the prior three pages prepare the reader to read honestly._
-6. [[prompt-as-thinking]] — _the prompting thesis; only useful once Section 1 has set what the model is._
-7. [[the-intern-frame]] — _the behavior protocol that turns the thesis into onboarding moves the prompter can repeat._
-8. [[iterating-on-prompts]] — _editing the prompt as editing the prompter's thinking; the move that closes the gap the first prompt leaves open._
-9. [[reading-the-output]] — _the audit posture that closes the prompting loop before the artifact leaves the desk._
-10. [[what-is-context]] — _the next surface to control once prompting is in hand; the window is what the model has to think with._
-11. [[chats-vs-projects]] — _the state model under context: which container holds what, and why a new chat is a deliberate reset._
-12. [[feeding-the-model]] — _the curation discipline that decides what enters the window before the ask._
-13. [[memory-and-state]] — _what persists across chats, what does not, and what the application puts back without telling the user._
-14. [[which-tool-when]] — _tool choice across the four mainstream chat tools, scoped to non-engineering tasks._
-15. [[chatbot-vs-agent]] — _the interaction shape, redrawn around whether the model acts between turns._
-16. [[personal-workflows]] — _the method, instantiated four ways: research, writing, summarizing, planning._
-17. [[when-workflows-graduate]] — _the off-ramp; the signal that chat has run out and the next move is engineering._
+1. [[how-not-to-produce-ai-slop]] — _the central thesis of the hub; every other page is a way of carrying it out._
+2. [[what-llms-are]] — _the one mental model the rest of the hub leans on; without it, nothing about prompting, context, or tool choice makes sense._
+3. [[what-llms-arent]] — _the three things people expect a model to be — search engine, database, reasoner — and the failures each expectation produces. Comes right after the positive model so the contrast lands._
+4. [[why-they-hallucinate]] — _why made-up answers are baked into how these models work, not a bug to fix. Read this before prompting so the habit of checking what comes back is already in place._
+5. [[what-theyre-good-and-bad-at]] — _a snapshot of what tasks land and what tasks slide off. The three pages before this one give you the eyes to read this honestly instead of as a wish list._
+6. [[prompt-as-thinking]] — _the main idea of the prompting section; only useful once Section 1 has set up what the model actually is._
+7. [[the-intern-frame]] — _a working metaphor that turns the idea on the previous page into onboarding moves you can repeat._
+8. [[iterating-on-prompts]] — _editing the prompt as editing your own thinking. The move that closes the gap the first prompt always leaves open._
+9. [[reading-the-output]] — _how to read what comes back carefully enough to catch the problems before anyone else does. Closes the prompting loop before the artifact leaves your desk._
+10. [[what-is-context]] — _the next surface to control once prompting is in hand; the window is what the model has to think with this turn._
+11. [[chats-vs-projects]] — _the first place context stretches beyond a single window into standing setup; comes after [[what-is-context]] and before [[feeding-the-model]] so you understand the container before you start filling it._
+12. [[feeding-the-model]] — _the curation discipline that decides what goes into the window before you ask the question._
+13. [[memory-and-state]] — _the third turn of the screw on context — once you understand the window and what to put in it, this is what the app quietly puts in without your asking; comes after [[feeding-the-model]] so "in the window" is already a concrete idea._
+14. [[which-tool-when]] — _matching the four mainstream chat tools to non-engineering tasks. Comes after Sections 1–3 so you're choosing on the shape of the work, not on which tool sounds the friendliest._
+15. [[chatbot-vs-agent]] — _comes after [[which-tool-when]] so the chat-vs-agent question lands once you already know what the four chat tools can do; primes the move from chat to workflow that the next two pages walk through._
+16. [[personal-workflows]] — _four worked examples — research, writing, summarizing, planning — that put the previous pages to work in a single sitting._
+17. [[when-workflows-graduate]] — _the exit door from this hub; the signal that the chat window has run out and the next move is engineering._
 
-Once read, the hub is self-directed. [[curated-links]] holds the primary sources behind the synthesis; in-prose wikilinks carry the rest.
+Once you've read through, the hub is yours to follow however you like. [[curated-links]] holds the primary sources the hub draws on; the wikilinks inside each page carry the rest.
 
 *Related: [[how-not-to-produce-ai-slop]] · [[curated-links]]*
