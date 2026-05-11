@@ -83,9 +83,9 @@ A few things trip people up the first time they use projects seriously.
 
 **A preamble that tries to cover every task clutters every chat.** When a project's instructions try to handle every possible request — "be formal sometimes, casual other times, write code if asked, otherwise write prose, follow these eight style rules" — every chat opened inside that project inherits the whole pile. The model gets less focused, not more. Project instructions earn their place only if you would genuinely want them prepended to the next chat you open there. Anything more specific belongs in the chat itself.
 
-**Projects do not isolate you from yourself.** Conversations inside a project still share whatever account-level memory or persistence the product offers. If you are worried about a sensitive thread bleeding into a general one, the relevant setting is usually in account preferences, not in the project.
+**Projects don't wall off account-level memory.** Conversations inside a project still share whatever account-level memory or persistence the product offers. If you are worried about a sensitive thread bleeding into a general one, the relevant setting is usually in account preferences, not in the project.
 
-The mental model is small but it pays off quickly: the window is the room the model thinks in this turn, a project is a doormat sign that says "here is what to bring into every room I open in this house," and a new chat is the choice to walk into a fresh room. Once those three pieces are clear, picking the right one for a given task stops feeling like a guess.
+The mental model is small but it pays off quickly: the window is the room the model thinks in this turn, a project is the standing instructions you leave at the door of every room you open in a particular house, and a new chat is the choice to walk into a fresh room. Once those three pieces are clear, picking the right one for a given task stops feeling like a guess.
 
 ---
 
